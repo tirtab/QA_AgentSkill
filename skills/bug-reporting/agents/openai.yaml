@@ -1,0 +1,11 @@
+interface:
+  display_name: Bug Reporting
+  short_description: Document evidence-based bug reports and distinguish product defects from blockers
+  default_prompt: Use $bug-reporting when a QA engineer needs to document suspected product behavior, classify evidence, or prepare a risk-based bug report.
+  policy:
+    allow_implicit_invocation: true
+    products:
+    - chatgpt
+    - codex
+    - api
+    - atlas
