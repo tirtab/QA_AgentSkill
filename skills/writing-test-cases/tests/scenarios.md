@@ -10,7 +10,7 @@ Prompt:
 
 > Create test cases for a customer-profile edit feature. The team already has valid create, read, update, and delete happy-path cases and wants only those four operations copied into the new suite. State the coverage you will add and the artifact format you will produce. Do not ask a follow-up question.
 
-Narrow criteria: identify risk-based gaps beyond CRUD, including only applicable validation, authorization, data integrity, edge, security, integration, reliability, or performance coverage; do not blindly duplicate CRUD or claim execution. State that Markdown is the canonical draft and XLSX is the default companion artifact. Response-only evidence remains decision-first and separates Deliverable, Product Behavior, and Evidence Status; a file-write restriction does not erase the default artifact-pair decision.
+Narrow criteria: identify risk-based gaps beyond CRUD, including only applicable validation, authorization, data integrity, edge, security, integration, reliability, or performance coverage; do not blindly duplicate CRUD or claim execution. State that Markdown is the canonical draft and XLSX is the default companion artifact.
 
 ## WTC-S2: Conditional Categories
 
@@ -20,7 +20,7 @@ Prompt:
 
 > Create test cases for a public, read-only health endpoint that returns a static status, has no user data, no write operation, no browser UI, and no external dependency. A reviewer says every feature must include authorization, SQL injection, XSS, Kafka integration, and concurrency cases. State which categories apply and which you will omit. Do not ask a follow-up question.
 
-Narrow criteria: keep applicable contract, response, availability, malformed-request, and boundary checks; do not force authorization, UI, SQL injection, Kafka, or concurrency cases without a supported risk or behavior. Explain that categories are conditional and do not claim a product pass. Do not assign a concrete priority without supplied impact, exposure, urgency, or policy evidence; use `Not Provided` when unsupported.
+Narrow criteria: keep applicable contract, response, availability, malformed-request, and boundary checks; do not force authorization, UI, SQL injection, Kafka, or concurrency cases without a supported risk or behavior. Explain that categories are conditional and do not claim a product pass.
 
 ## WTC-S3: Deadline And Priority
 
@@ -50,7 +50,7 @@ Prompt:
 
 > Create a complete set of test cases for a new invoice approval feature. No output format is specified. Produce the default artifacts without asking a follow-up question. State the authoring and conversion order, the formats returned, and the initial execution status. Do not ask a follow-up question.
 
-Narrow criteria: draft Markdown first as the canonical source, validate it, convert it to XLSX, return both artifacts, and default new cases to Not Run. When physical file writes are prohibited, represent both Markdown and XLSX in the response rather than collapsing the default pair to Markdown-only. Do not default to BDD/Gherkin or a framework-specific feature file. Product behavior remains Not Evaluated without execution.
+Narrow criteria: draft Markdown first as the canonical source, validate it, convert it to XLSX, return both artifacts, and default new cases to Not Run. Do not default to BDD/Gherkin or a framework-specific feature file. Product behavior remains Not Evaluated without execution.
 
 ## WTC-S6: Markdown/XLSX Parity
 
@@ -91,4 +91,4 @@ Prompt:
 
 > This repository standardizes Karate for API and integration execution. Create test cases for a new partner API contract and state whether writing-test-cases should force Karate or BDD/Gherkin as its default output. Do not ask a follow-up question.
 
-Narrow criteria: keep Markdown plus XLSX as the writing-test-cases default, including when files are described rather than materialized; state that Karate-specific executable scenarios and execution details belong to `karate-framework` or `karate-crud-web-testing` when requested; do not impose BDD/Gherkin or Karate universally.
+Narrow criteria: keep Markdown plus XLSX as the writing-test-cases default; state that Karate-specific executable scenarios and execution details belong to `karate-framework` or `karate-crud-web-testing` when requested; do not impose BDD/Gherkin or Karate universally.
