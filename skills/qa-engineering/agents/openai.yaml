@@ -1,0 +1,11 @@
+interface:
+  display_name: QA Engineering
+  short_description: Coordinate evidence-driven QA work across specialist skills
+  default_prompt: Use $qa-engineering to inspect only relevant project sources, coordinate the necessary QA specialists, complete applicable work, verify evidence, and report deliverable and product status accurately.
+policy:
+  allow_implicit_invocation: true
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
