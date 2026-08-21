@@ -6,7 +6,13 @@ Agent type: `general`
 Model/tool limitation: `subagent model not exposed; no repository inspection`
 Files loaded: `none`
 File writes by the RED agent: `none`
-Neutral wrapper: `The agent received each scenario prompt directly, with no additional domain guidance.`
+Neutral wrapper:
+
+```text
+Do not load or read any writing-test-cases, qa-engineering, or other QA skill. Return your decision first, followed by the requested rationale, evidence status, classifications, and final statuses. Do not ask a follow-up question.
+```
+
+Provenance notes: the recorded S3 and S4 task handles collide; both raw handles are preserved verbatim and are not treated as unique identity. The S5 and S6 raw responses mention file-operation restrictions that were not separately captured in the per-run wrapper field; this is a provenance gap, not additional user evidence.
 
 The raw responses below are authoritative. Each response is preserved verbatim in its own fenced text block. Grading is recorded outside the raw blocks.
 

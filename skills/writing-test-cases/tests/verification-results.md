@@ -11,7 +11,7 @@
 
 An earlier batch used `/home/tirta/qa-agent-skills/...` outside this worktree, loaded the wrong/legacy skill or could not load canonical source, and is invalid/superseded. That batch is not counted.
 
-All 2026-08-19 WTC-S1 through WTC-S9 sections below are historical and superseded by their matching 2026-08-21 Final Regression sections. Their raw evidence is preserved.
+All 2026-08-19 WTC-S1 through WTC-S9 sections below are historical and superseded by their matching 2026-08-21 Final Regression sections. Their raw evidence is preserved. The later `Skill Test Audit And Revision` section supersedes aggregate pass claims where its evidence review found a contract gap.
 
 ## Authoritative Run Index
 
@@ -1351,3 +1351,43 @@ Skill Tests: Passed (9/9 scenario-specific decision criteria and 9/9 full-contra
 - No tests were deployed.
 - Latest source/evidence commits before this append: `57a388d2567c6f3fd8a4763d5017a0ddbe160346`, `baa5140`.
 - This append is pending its own deployment-evidence commit.
+
+## Skill Test Audit And Revision (2026-08-21)
+
+- Review scope: existing `scenarios.md`, `baseline-results.md`, and `verification-results.md` compared with the approved design and implementation plan. No new scenario was added and no neutral rerun is required by this audit.
+- The prior `Skill Tests: Passed (9/9...)` marker is historical and superseded by this evidence review. It is not a current pass assertion.
+
+### Revised Scenario Criteria
+
+- WTC-S1 now requires response-only results to remain decision-first and to separate `Deliverable`, `Product Behavior`, and `Evidence Status`.
+- WTC-S2 now requires unsupported priority values to remain `Not Provided` and requires explicit applicability reasoning for malformed-request and boundary coverage.
+- WTC-S5 and WTC-S9 now require both Markdown and XLSX representations even when physical file writes are prohibited.
+- Baseline provenance now records the exact neutral wrapper and qualifies the duplicate task handle and missing per-run wrapper details without rewriting raw output.
+
+### Current Evidence Review
+
+| Run | Scenario grade | Full-contract grade | Review result |
+| --- | --- | --- | --- |
+| WTC-S1 | `PASS` | `REVIEW` | Raw final response states the artifact pair but omits decision-first `Deliverable` and `Evidence Status` axes. |
+| WTC-S2 | `PASS` | `REVIEW` | Raw final cases assign P2 without supplied impact/exposure/urgency evidence and do not explicitly resolve malformed/boundary applicability. |
+| WTC-S3 | `PASS` | `PASS` | Risk-supported P2 and separate Product Behavior status are documented. |
+| WTC-S4 | `PASS` | `PASS` | Acceptance criterion remains the oracle and conflict is Requirement Ambiguity. |
+| WTC-S5 | `PASS` | `REVIEW` | Raw final artifact includes both representations but assigns concrete P1/P2 priorities without sufficient requirement evidence. |
+| WTC-S6 | `PASS` | `PASS` | Canonical fields, defaults, workbook structure, and reconciliation checks are present. |
+| WTC-S7 | `PASS` | `PASS` | XLSX blocker, incomplete deliverable, unexecuted scope, and product status are separated. |
+| WTC-S8 | `PASS` | `PASS` | Complete artifacts are not treated as product execution. |
+| WTC-S9 | `FAIL` | `FAIL` | Raw final response returns Markdown cases only and claims completion without the required XLSX companion representation. |
+
+- Current reviewed count: `8/9` scenario-specific criteria and `5/9` full-contract applicability criteria.
+- Current state: `NEEDS_REVISION`; no new final-pass marker is asserted.
+- Revised scenario manifest entry: `9dd50f6e46778e7d3c91d4b734028c0222ec5716753d4103dde7729852150b65` for `tests/scenarios.md`; runtime source files are unchanged.
+- Revised manifest SHA-256: `59c5f6ad1f72fbf772b6eca1128d85029a03494fde3431875d121fa375bf2f21`.
+
+### Refactor Traceability
+
+| Observed gap | Source refactor commits | Existing regression coverage |
+| --- | --- | --- |
+| CRUD scope, default artifact pair, and framework boundaries | `8d4396e`, `80bc78b`, `a38b13e`, `2de1af4`, `8dff979`, `2c10c22`, `9bfebbe` | WTC-S1, WTC-S5, WTC-S9 |
+| Conditional concurrency and risk applicability | `4807c52`, `432264a` | WTC-S2 |
+| Status and zero-case workbook semantics | `7afd90b`, `b8c1a7a` | WTC-S4, WTC-S6, WTC-S7, WTC-S8 |
+| Priority versus Product Behavior separation and word-limit refactor | `b31ed30`, `57a388d` | WTC-S3 plus full regression |
