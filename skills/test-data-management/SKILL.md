@@ -9,7 +9,8 @@ description: Use when a QA engineer needs to create, manage, or organize isolate
 
 - **Guidance mode:** Recommend a data strategy, builders, ownership, lifecycle, and evidence boundary.
 - **Artifact mode:** Create requested factories, fixtures, payloads, or data plans only when the project supplies the required capabilities. Mark missing capabilities as `Not Provided`.
-- Do not treat authored data or a data plan as product execution or proof of product behavior.
+- When detailed strategy guidance is needed, load `references/data-strategy-and-isolation.md` before responding.
+- Canonical status: data authorship is not product execution. Without valid execution against a supported oracle, report `Product Behavior: Not Evaluated`; report deliverable and evidence status separately.
 
 ## Workflow
 
@@ -30,16 +31,16 @@ Reject hardcoded identifiers, arbitrary foreign keys, and shared mutable staging
 
 Choose the narrowest strategy that matches the boundary:
 
-- Use a **reset or isolated schema** when committed state, cross-process visibility, or durable side effects are under test.
+- Use a **reset or isolated schema** only for durable state in a controlled store, such as committed state or cross-process visibility. It does not isolate queues, files, email, partner calls, or other external effects; use boundary-specific doubles or sandboxes for those effects.
 - Use a **transaction with rollback** when the system and runner keep all relevant work in one rollback-capable boundary.
 - Use a **focused fixture** for stable immutable reference data, while each test creates its own mutable records.
 - Use a **sandbox, container, or in-memory store** when it faithfully represents the boundary and is available.
 
-Define who owns every record, when cleanup runs, what happens on failure, and whether parallel workers have separate namespaces or stores. Cleanup must be per test, per worker, or an explicitly bounded disposable environment; suite-only cleanup is insufficient. Isolation cannot undo effects that cross an external boundary, so document what is isolated, what is not, and the resulting evidence limit.
+Define per-test or per-worker ownership for every record, when cleanup runs, what happens on failure or interruption, and whether parallel workers have separate namespaces or stores. Cleanup must be idempotent and run after normal completion, failure, or interruption within an explicitly bounded scope; suite-only cleanup remains insufficient. Isolation cannot undo effects that cross an external boundary, so document what is isolated, what is not, and the resulting evidence limit.
 
 ## Determinism And Relationships
 
-Use deterministic scoped sequences or controlled seeds for values that must be unique. Scope uniqueness by test, worker, or disposable environment, and capture generated identifiers, timestamps, tokens, and other observable values for assertions. Do not use uncontrolled randomness or current time to hide collisions. Construct parents before children, or use relationship-aware builders, and preserve valid cardinality, ownership, and lifecycle rules. Unknown schema or capability details are `Not Provided`, not guesses.
+Use deterministic scoped sequences or controlled seeds with a run/scenario namespace plus a worker/test stable counter for values that must be unique. For timestamp assertions, use a frozen or injected clock, or capture the generated timestamp. Do not use uncontrolled randomness or current time to hide collisions. Construct parents before children, or use relationship-aware builders, and preserve valid cardinality, ownership, and lifecycle rules. Unknown schema or capability details are `Not Provided`, not guesses.
 
 ## Safety And Integration
 
