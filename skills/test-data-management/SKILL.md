@@ -10,7 +10,7 @@ description: Use when a QA engineer needs to create, manage, or organize isolate
 - **Guidance mode:** Recommend a data strategy, builders, ownership, lifecycle, and evidence boundary.
 - **Artifact mode:** Create requested factories, fixtures, payloads, or data plans only when the project supplies the required capabilities. Mark missing capabilities as `Not Provided`.
 - When detailed strategy guidance is needed, load `references/data-strategy-and-isolation.md` before responding.
-- Canonical status: data authorship is not product execution. Without valid execution against a supported oracle, report `Product Behavior: Not Evaluated`; report deliverable and evidence status separately.
+- Canonical status: use `Deliverable: Complete` when requested data work and feasible validation are complete, `Deliverable: Incomplete` when requested content or validation is missing, and `Deliverable: Not Applicable` when no data deliverable is requested. Data authorship is not product execution. Without valid execution against a supported oracle, report `Product Behavior: Not Evaluated`; report `Evidence Status` separately.
 
 ## Workflow
 

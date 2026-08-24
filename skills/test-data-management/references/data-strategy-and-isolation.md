@@ -32,7 +32,7 @@ Select isolation from the test boundary and the available project capabilities:
 - **Sandbox or container:** Use when a disposable environment is needed for realistic state, process boundaries, or destructive behavior.
 - **In-memory store:** Use only when its semantics match the behavior under test; it cannot prove behavior that depends on a real persistence or network boundary.
 
-For the selected strategy, document the owner, setup scope, cleanup trigger, failure cleanup, retry behavior, worker namespace, and parallel execution model. Cleanup should run at the smallest reliable scope, such as each test, worker, transaction, or disposable environment. Suite-end cleanup alone leaves failures and interrupted runs coupled to later work.
+For the selected strategy, document the owner, setup scope, cleanup trigger, failure cleanup, retry behavior, worker namespace, and parallel execution model. Cleanup must be idempotent and must run after normal completion or continue after failure or interruption within the bounded scope, such as each test, worker, transaction, or disposable environment. Suite-end cleanup alone leaves failures and interrupted runs coupled to later work.
 
 No strategy isolates every effect. Record whether queues, files, caches, emails, partner calls, clocks, and other external effects are reset, doubled, sandboxed, or left outside the boundary. State the residual collision, leakage, and evidence risks.
 
@@ -65,4 +65,5 @@ Scope permissions narrowly, avoid repeating destructive actions in shared enviro
 - Are values deterministic, scoped, reproducible, and captured for assertions?
 - Are data sources synthetic and non-secret, with controlled doubles for risky effects?
 - Is the integration boundary named, with cross-boundary limitations and missing capabilities marked `Not Provided`?
+- Are cleanup actions interruption-safe and idempotent, and are canonical `Deliverable`, `Product Behavior`, and `Evidence Status` reported separately?
 - Are deliverable and Product Behavior statuses separate, with no execution claim from data authorship?
