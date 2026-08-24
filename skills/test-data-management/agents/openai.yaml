@@ -1,0 +1,11 @@
+interface:
+  display_name: Test Data Management
+  short_description: Create isolated, reusable, deterministic, and safe test data
+  default_prompt: Use $test-data-management to design or create isolated, reusable, deterministic, and safe test data, state missing capabilities as Not Provided, and report data deliverables separately from Product Behavior.
+  policy:
+    allow_implicit_invocation: true
+    products:
+    - chatgpt
+    - codex
+    - api
+    - atlas
