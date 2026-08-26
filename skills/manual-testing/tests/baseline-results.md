@@ -6,6 +6,7 @@
 - Model/tool limitation: model not exposed; no repository or skill inspection
 - Files loaded by RED agents: none
 - File writes by RED agents: none
+- RED agent boundary: Every RED agent was explicitly instructed not to inspect any repository or file, load any skill, or create or modify files.
 - Neutral wrapper:
 
 ```text
