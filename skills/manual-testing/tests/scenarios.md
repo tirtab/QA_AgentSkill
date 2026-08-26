@@ -1,4 +1,4 @@
-# Test Data/Manual Testing Skill Scenarios
+# Manual Testing Skill Scenarios
 
 Grading evaluates manual-testing decisions and evidence boundaries, not exact wording. Every response must report separate `Deliverable`, `Product Behavior`, and `Evidence Status`. Authored plans/observations without valid execution against an oracle must not be `Product Behavior: Verified Pass`.
 
