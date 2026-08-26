@@ -28,10 +28,10 @@ This plan changes only `test-data-management`. It does not modify `qa-engineerin
 
 **Files:** Verify repository and global baseline; create only the planned source directories.
 
-- [ ] Verify `/home/tirta/qa-agent-skills` is clean or concurrent changes are understood.
-- [ ] Read this design, the hybrid rollout design, and the existing global baseline skill.
-- [ ] Confirm fresh general subagents are available.
-- [ ] Create `skills/test-data-management/tests`, `references`, and `agents` only after the checks pass.
+- [x] Verify `/home/tirta/qa-agent-skills` is clean or concurrent changes are understood.
+- [x] Read this design, the hybrid rollout design, and the existing global baseline skill.
+- [x] Confirm fresh general subagents are available.
+- [x] Create `skills/test-data-management/tests`, `references`, and `agents` only after the checks pass.
 
 ## Task 1: Define RED Pressure Scenarios
 
@@ -65,32 +65,32 @@ Preserve exact prompts, raw output, task handles, date, harness, model limitatio
 
 **Files:** `SKILL.md`, direct reference, and `agents/openai.yaml`.
 
-- [ ] Create the exact runtime section order: frontmatter, `# Test Data Management`, `## Output Modes`, `## Workflow`, `## Factory And Builder Roles`, `## Isolation And Lifecycle`, `## Determinism And Relationships`, `## Safety And Integration`, and `## Quality Gate`.
-- [ ] Remove Laravel/PHP/ORM/vendor defaults from runtime output. Keep examples generic and label project capabilities `Not Provided`.
-- [ ] Put detailed strategy and schema guidance in the direct reference rather than bloating `SKILL.md`.
-- [ ] Create metadata with display name `Test Data Management`, a generic description, an implicit invocation policy, and no project-specific prompt.
-- [ ] Run word, placeholder, leakage, ASCII, and whitespace checks before committing source.
+- [x] Create the exact runtime section order: frontmatter, `# Test Data Management`, `## Output Modes`, `## Workflow`, `## Factory And Builder Roles`, `## Isolation And Lifecycle`, `## Determinism And Relationships`, `## Safety And Integration`, and `## Quality Gate`.
+- [x] Remove Laravel/PHP/ORM/vendor defaults from runtime output. Keep examples generic and label project capabilities `Not Provided`.
+- [x] Put detailed strategy and schema guidance in the direct reference rather than bloating `SKILL.md`.
+- [x] Create metadata with display name `Test Data Management`, a generic description, an implicit invocation policy, and no project-specific prompt.
+- [x] Run word, placeholder, leakage, ASCII, and whitespace checks before committing source.
 
 ## Task 4: Run Paired GREEN And Refactor Verification
 
 **Files:** `verification-results.md`, `paired-source-manifest.sha256`, and runtime source only when a demonstrated loophole requires it.
 
-- [ ] Freeze hashes for `SKILL.md`, the direct reference, `agents/openai.yaml`, and `tests/scenarios.md`.
-- [ ] Run the seven exact scenarios with the same prompts and only the canonical skill-loading clause added.
-- [ ] Grade narrow criteria and Common QA Contract separately, including builder roles, oracle, isolation, determinism, safety, status axes, and project-leakage checks.
-- [ ] If a scenario fails, preserve raw output, add the smallest counter, update the manifest, and rerun the affected scenario plus all seven scenarios.
-- [ ] Record the final marker only after all seven scenarios pass and the manifest is current.
+- [x] Freeze hashes for `SKILL.md`, the direct reference, `agents/openai.yaml`, and `tests/scenarios.md`.
+- [x] Run the seven exact scenarios with the same prompts and only the canonical skill-loading clause added.
+- [x] Grade narrow criteria and Common QA Contract separately, including builder roles, oracle, isolation, determinism, safety, status axes, and project-leakage checks.
+- [x] Evaluate scenario failures; none occurred after the source freeze, so no counter or rerun was required.
+- [x] Record the final marker only after all seven scenarios pass and the manifest is current.
 
 ## Task 5: Final Source Verification
 
-- [ ] Verify manifest, whitespace, word limit, exact required headings, no project leakage, and no runtime `tests/` files.
-- [ ] Confirm all seven scenarios have exact prompts, pressure labels, raw output, task handles, loaded files, narrow grading, full-contract grading, and final outcomes.
-- [ ] Review source against the design and confirm no other skill changed.
+- [x] Verify manifest, whitespace, word limit, exact required headings, no project leakage, and no runtime `tests/` files.
+- [x] Confirm all seven scenarios have exact prompts, pressure labels, raw output, task handles, loaded files, narrow grading, full-contract grading, and final outcomes.
+- [x] Review source against the design and confirm no other skill changed.
 
 ## Task 6: Deploy And Prepare The Skill PR
 
-- [ ] Review `/home/tirta/.agents/skills/test-data-management/SKILL.md` as a legacy collision before deployment.
-- [ ] Mirror only `SKILL.md`, `references/`, and `agents/` with an explicit allowlist.
-- [ ] Verify source/runtime exact equality and no runtime `tests/` directory.
-- [ ] Record deployment inventory, hashes, excluded-tests confirmation, and final test marker.
+- [x] Review `/home/tirta/.agents/skills/test-data-management/SKILL.md` as a legacy collision before deployment.
+- [x] Mirror only `SKILL.md`, `references/`, and `agents/` with an explicit allowlist.
+- [x] Verify source/runtime exact equality and no runtime `tests/` directory.
+- [x] Record deployment inventory, hashes, excluded-tests confirmation, and final test marker.
 - [ ] Create a dedicated `pr/test-data-management` branch from `origin/main`, commit only this skill and its docs/evidence, push it, and use `main` as the PR base.

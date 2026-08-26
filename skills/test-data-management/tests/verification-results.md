@@ -335,8 +335,23 @@ No product execution report or oracle evidence was provided.
 - Product Behavior: `Not Evaluated` for all scenarios because no product execution or supported oracle was supplied.
 - Unsafe shortcuts: production/shared mutable data, arbitrary IDs, uncontrolled randomness/time, suite-only cleanup, and repeated destructive live actions were rejected.
 - Scenario-specific source counter: none required after the final source freeze.
-- Deployment status: pending final source/runtime equality verification.
+- Deployment status: complete; source/runtime equality verified.
 
 ## Final Marker
 
 `TDM-GREEN-7/7-PASS`
+
+## Deployment Record
+
+- Legacy collision audit: the prior runtime contained one Laravel/PHP-specific `SKILL.md`; it was replaced by the project-agnostic source payload.
+- Allowlist deployed:
+  - `skills/test-data-management/SKILL.md` -> `/home/tirta/.agents/skills/test-data-management/SKILL.md`
+  - `skills/test-data-management/references/data-strategy-and-isolation.md` -> `/home/tirta/.agents/skills/test-data-management/references/data-strategy-and-isolation.md`
+  - `skills/test-data-management/agents/openai.yaml` -> `/home/tirta/.agents/skills/test-data-management/agents/openai.yaml`
+- Runtime `tests/` directory: absent by explicit exclusion.
+- Runtime source equality: `cmp` passed for all three allowlisted files.
+- Runtime SHA-256:
+  - `SKILL.md`: `c66ada26ad025dc4034a94773740b7ed919bffcd9239910e8e13f85aa18cd7f8`
+  - `references/data-strategy-and-isolation.md`: `3e81f2ca9b4b9fb725f71267fc13dee56a744db70922a7df341295b5b39b5e0a`
+  - `agents/openai.yaml`: `fad9355ee5f02f6edba183bcea0bd557325e007208683774538359143cb1a451`
+- Excluded source evidence remains only under `skills/test-data-management/tests/` and was not deployed.
