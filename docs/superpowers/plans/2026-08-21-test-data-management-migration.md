@@ -93,4 +93,4 @@ Preserve exact prompts, raw output, task handles, date, harness, model limitatio
 - [x] Mirror only `SKILL.md`, `references/`, and `agents/` with an explicit allowlist.
 - [x] Verify source/runtime exact equality and no runtime `tests/` directory.
 - [x] Record deployment inventory, hashes, excluded-tests confirmation, and final test marker.
-- [ ] Create a dedicated `pr/test-data-management` branch from `origin/main`, commit only this skill and its docs/evidence, push it, and use `main` as the PR base.
+- [x] Create a dedicated `pr/test-data-management` branch from `origin/main`, commit only this skill and its docs/evidence, push it, and use `main` as the PR base.
