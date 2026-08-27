@@ -15,6 +15,7 @@ Manual testing is human-led verification of observed product behavior. It is pro
   - `Deliverable`: `Complete`, `Incomplete`, or `Not Applicable`.
   - `Product Behavior`: `Verified Pass`, `Verified Failure: Product Defect`, `Unverified Due to Blocker`, or `Not Evaluated`.
   - `Evidence Status`: report independently whether evidence is available, partial, blocked, or `Not Provided`.
+- Guidance without a requested artifact uses `Deliverable: Not Applicable`.
 - **Detailed guidance:** load `references/manual-execution-and-evidence.md` for detailed session fields, evidence, oracle, triage, safety, and reporting rules.
 
 ## Responsibility And Boundaries
@@ -26,11 +27,11 @@ Route work directly when needed to `writing-test-cases` for case design, `test-d
 ## Workflow
 
 1. Plan the session: state objective, scope boundaries, risks, entry criteria, build and environment, data, oracle, capabilities, evidence channels, stop conditions, cleanup, and requested deliverable.
-2. Discover task-critical project sources and supported capabilities. Select a structured flow, an exploratory charter, or both; prioritize coverage by risk and applicable technology.
+2. Discover relevant project sources and supported capabilities. Select structured or exploratory execution; prioritize coverage by risk and technology.
 3. Execute with a human observer. Record each structured step or timestamped exploratory action with expected and actual results. Stop safely at a blocker or unsafe state.
-4. Capture evidence as the behavior occurs. Preserve identifiers and timestamps while redacting sensitive values.
+4. Capture evidence as behavior occurs. Preserve identifiers and timestamps while redacting sensitive values.
 5. Compare valid execution evidence with the oracle and assign the exact Product Behavior status. Product Behavior is the comparison of valid execution evidence with the oracle, never a conclusion from a requirement, plan, checklist, or charter alone.
-6. Triage failures across product, requirement, data, environment, access, tool or selector, dependency, timing, and observability. Report the named blocker and unexecuted scope when evaluation cannot be completed.
+6. Triage failures across product, requirement, data, environment, access, tool or selector, automation, dependency, timing, and observability. Report the named blocker and unexecuted scope when evaluation cannot be completed.
 
 ## Conditional Technology Checks
 
