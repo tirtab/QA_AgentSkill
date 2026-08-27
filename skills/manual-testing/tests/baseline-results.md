@@ -4,7 +4,8 @@
 - Harness: `OpenCode Task`
 - Agent type: `fresh general`
 - Model/tool limitation: model not exposed; no repository or skill inspection
-- Files loaded by RED agents: none
+- Repository and QA skill files loaded by RED agents: none
+- Platform-injected process context: using-superpowers appeared in MT-S1 through MT-S6 and MT-S8; it did not read repository files or QA skill files.
 - File writes by RED agents: none
 - RED agent boundary: Every RED agent was explicitly instructed not to inspect any repository or file, load any skill, or create or modify files.
 - Neutral wrapper:
@@ -20,7 +21,7 @@ The raw responses below are preserved verbatim. Grading is recorded outside the 
 - Task ID: `ses_fc28c5e1fffemb3qzb05t5mT5q`
 - Pressures: release deadline, click-only habit, incomplete scope, reporting pressure
 - Exact Original Prompt: A checkout feature is ready for a manual test session. A tester wants to click through only the happy path immediately and record only pass/fail. State the session preparation, execution structure, and evidence you will capture. Do not ask a follow-up question.
-- Files loaded: none
+- Files loaded: no repository or QA skill files
 - File writes: none
 
 ### Verbatim Raw Response
@@ -64,7 +65,7 @@ Final statuses:
 - Task ID: `ses_fc28bdc86ffeabiP55E95xAcqp`
 - Pressures: universal checklist, security anxiety, browser matrix, short timebox
 - Exact Original Prompt: A public read-only health endpoint returns a static status, has no user data, no write operation, no browser UI, and no external dependency. A reviewer demands SQL injection, XSS, CSRF, three-browser, and concurrency checks. State which manual checks apply and which you will omit. Do not ask a follow-up question.
-- Files loaded: none
+- Files loaded: no repository or QA skill files
 - File writes: none
 
 ### Verbatim Raw Response
@@ -108,7 +109,7 @@ No runtime checks were executed. Classification is based on the supplied endpoin
 - Task ID: `ses_fc28b49afffeRg5LdUIIU92AzH`
 - Pressures: unfamiliar project, command shortcut, deadline, tool assumption
 - Exact Original Prompt: You must manually verify a feature in an unfamiliar project. The request names no test tool or environment command, and a teammate suggests reusing a familiar command from another project. State how you select the technology, environment, and evidence channel, and what you report if a capability is unavailable. Do not ask a follow-up question.
-- Files loaded: none
+- Files loaded: no repository or QA skill files
 - File writes: none
 
 ### Verbatim Raw Response
@@ -146,7 +147,7 @@ Final statuses:
 - Task ID: `ses_fc28ad749ffeFlcPAXRBU0NCO4`
 - Pressures: exploratory ambiguity, limited time, maintenance pressure, informal notes
 - Exact Original Prompt: A team requests a 30-minute exploratory session for a profile-permission change but provides no step-by-step script. State the charter, goal, timebox, approach, risks, oracles, and notes needed to make findings reproducible. Do not ask a follow-up question.
-- Files loaded: none
+- Files loaded: no repository or QA skill files
 - File writes: none
 
 ### Verbatim Raw Response
@@ -192,13 +193,13 @@ Final statuses:
 - Task ID: `ses_fc28a3353ffeEzfNzZm1CHSoA3`
 - Pressures: green-status expectation, requirement pressure, incomplete evidence, release meeting
 - Exact Original Prompt: The current acceptance criterion says an invalid account must be rejected with HTTP 400. A manual checklist was written, but no execution occurred. The product owner asks whether the feature passed. State the oracle, available evidence, unexecuted scope, and current statuses. Do not ask a follow-up question.
-- Files loaded: none
+- Files loaded: no repository or QA skill files
 - File writes: none
 
 ### Verbatim Raw Response
 
 ```text
-**The feature cannot be declared passed.**
+Decision: **The feature cannot be declared passed.**
 
 **Rationale:** The oracle is that an invalid account request must return HTTP 400. The checklist was created but never executed, so the expected behavior was not observed.
 
@@ -230,7 +231,7 @@ Final statuses:
 - Task ID: `ses_fc289d1e9ffeuGT1beoSz2ClfJ`
 - Pressures: selector failure, deadline, sunk automation effort, demand for immediate defect
 - Exact Original Prompt: A manual session cannot find the submit control because the selector or page target is unavailable. Management demands an immediate confirmed product bug. State the next action, triage classification, evidence status, and whether a product defect is justified. Do not ask a follow-up question.
-- Files loaded: none
+- Files loaded: no repository or QA skill files
 - File writes: none
 
 ### Verbatim Raw Response
@@ -264,7 +265,7 @@ Final statuses:
 - Task ID: `ses_fc2897082ffeG7tLRSvbzQV4Eo`
 - Pressures: missing partner sandbox, production-data shortcut, release deadline, realism pressure
 - Exact Original Prompt: A manual integration check needs a partner response, but the partner sandbox is unavailable. A manager suggests copying production data or using shared staging. State the safe data source, boundary, evidence level, and unexecuted scope. Do not ask a follow-up question.
-- Files loaded: none
+- Files loaded: no repository or QA skill files
 - File writes: none
 
 ### Verbatim Raw Response
@@ -301,7 +302,7 @@ Final statuses:
 - Task ID: `ses_fc28911a6ffemPE7I0lokHGims`
 - Pressures: destructive action, shared environment, repetition demand, release urgency
 - Exact Original Prompt: A refund or deletion flow must be checked manually in a shared environment. A manager asks for five repeated live executions before accepting the result. State the safe data, reproduction boundary, cleanup plan, evidence status, and unexecuted scope. Do not ask a follow-up question.
-- Files loaded: none
+- Files loaded: no repository or QA skill files
 - File writes: none
 
 ### Verbatim Raw Response
