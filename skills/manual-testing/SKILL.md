@@ -5,7 +5,7 @@ description: Use when a tester must evaluate product behavior through human-led 
 
 # Manual Testing
 
-Manual testing is human-led verification of observed product behavior. It is project-agnostic, technology-aware, and capability-conditional: discover product context, choose checks supported by its surfaces, and never substitute familiar tools or assumptions for execution.
+Manual testing is human-led verification of product behavior. It is project-agnostic, technology-aware, and capability-conditional: discover context, choose supported checks, and never substitute assumptions for execution.
 
 ## Output Modes
 
@@ -15,7 +15,7 @@ Manual testing is human-led verification of observed product behavior. It is pro
   - `Deliverable`: `Complete`, `Incomplete`, or `Not Applicable`.
   - `Product Behavior`: `Verified Pass`, `Verified Failure: Product Defect`, `Unverified Due to Blocker`, or `Not Evaluated`.
   - `Evidence Status`: report independently whether evidence is available, partial, blocked, or `Not Provided`.
-- Guidance without a requested artifact uses `Deliverable: Not Applicable`.
+- A response-only guidance, classification, planning, or status request is not an artifact: use `Deliverable: Not Applicable`, even when the response is complete.
 - **Detailed guidance:** load `references/manual-execution-and-evidence.md` for detailed session fields, evidence, oracle, triage, safety, and reporting rules.
 
 ## Responsibility And Boundaries
@@ -26,12 +26,12 @@ Route work directly when needed to `writing-test-cases` for case design, `test-d
 
 ## Workflow
 
-1. Plan the session: state objective, scope boundaries, risks, entry criteria, build and environment, data, oracle, capabilities, evidence channels, stop conditions, cleanup, and requested deliverable.
+1. Plan: objective, scope boundaries, risks, entry criteria, build and environment, data, oracle, capabilities, evidence channels, stop conditions, cleanup, and requested deliverable.
 2. Discover relevant project sources and supported capabilities. Select structured or exploratory execution; prioritize coverage by risk and technology.
 3. Execute with a human observer. Record each structured step or timestamped exploratory action with expected and actual results. Stop safely at a blocker or unsafe state.
 4. Capture evidence as behavior occurs. Preserve identifiers and timestamps while redacting sensitive values.
 5. Compare valid execution evidence with the oracle and assign the exact Product Behavior status. Product Behavior is the comparison of valid execution evidence with the oracle, never a conclusion from a requirement, plan, checklist, or charter alone.
-6. Triage failures across product, requirement, data, environment, access, tool or selector, automation, dependency, timing, and observability. Report the named blocker and unexecuted scope when evaluation cannot be completed.
+6. For selector/page-target failures, triage selector/automation, product/page, data, environment/access, dependency, timing, requirement, and observability causes before any Product Defect status; report the named blocker and unexecuted scope, and rerun only within the safe boundary.
 
 ## Conditional Technology Checks
 
@@ -56,9 +56,9 @@ Execution evidence must identify scope, environment and build, test data, steps 
 
 ## Status And Safety
 
-Use `Verified Pass` only when valid evidence meets the oracle. Use `Verified Failure: Product Defect` only when valid evidence contradicts the oracle and triage excludes a blocker, data/setup fault, dependency fault, and oracle ambiguity. Use `Unverified Due to Blocker` when an attempted evaluation is prevented. Use `Not Evaluated` when the scope was not attempted. Keep these Product Behavior values independent from `Deliverable` and Evidence Status.
+Use `Verified Pass` only when valid evidence meets the oracle. Use `Verified Failure: Product Defect` only when valid evidence contradicts the oracle and triage excludes a blocker, data/setup fault, dependency fault, and oracle ambiguity. Use `Unverified Due to Blocker` when an attempted evaluation is prevented. Use `Not Evaluated` when the scope was not attempted. Keep Product Behavior separate from `Deliverable` and Evidence Status.
 
-Use synthetic, disposable, or test-owned data, or approved masked non-production data where authorized. Do not use unsafe production data, expose credentials, mutate shared state without approval, or repeat destructive actions without authorization and isolation. Bound destructive runs, prefer reversible operations, capture evidence before cleanup, and verify cleanup of records, jobs, messages, and artifacts. Do not make unsupported product, release, or defect claims.
+Use synthetic, disposable, test-owned, or authorized masked non-production data. Do not use unsafe production data, expose credentials, mutate shared state without approval, or repeat destructive actions without authorization and isolation. Bound destructive runs, prefer reversible operations, capture evidence before cleanup, and verify cleanup of records, jobs, messages, and artifacts. Do not make unsupported product, release, or defect claims.
 
 ## Quality Gate
 

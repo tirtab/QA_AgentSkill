@@ -56,7 +56,7 @@ Examples:
 - The submit control cannot be reached because the page target, access, or environment is unavailable. The attempted evaluation is `Product Behavior: Unverified Due to Blocker`, with the named blocker.
 - A checklist or plan exists but no step ran. Report `Product Behavior: Not Evaluated`; the document is not execution evidence.
 
-A guidance, classification, or planning response without a requested report artifact uses `Deliverable: Not Applicable`; `Complete` applies only to a requested report whose feasible validation is complete.
+A prompt asking only to state, choose, or explain a session is not a requested report artifact: use `Deliverable: Not Applicable`, even when the answer is complete. `Complete` applies only to a requested report whose feasible validation is complete.
 
 Report the axes separately. For example, a complete report with no run can be `Deliverable: Complete`, `Product Behavior: Not Evaluated`, and `Evidence Status: Not Provided`. A partial blocked report can be `Deliverable: Incomplete`, `Product Behavior: Unverified Due to Blocker`, and `Evidence Status: Blocked`. `Complete` describes the requested report, not product success. `Not Applicable` is for a deliverable genuinely outside the requested scope.
 
