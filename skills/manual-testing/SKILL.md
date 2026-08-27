@@ -1,6 +1,6 @@
 ---
 name: manual-testing
-description: Use when a tester must evaluate product behavior through human-led execution in an unfamiliar or changing project with technology-aware, capability-conditional coverage and evidence.
+description: Use when a tester must evaluate product behavior through human-led execution in a project with technology-aware, capability-conditional coverage and evidence.
 ---
 
 # Manual Testing
@@ -15,6 +15,7 @@ Manual testing is human-led verification of observed product behavior. It is pro
   - `Deliverable`: `Complete`, `Incomplete`, or `Not Applicable`.
   - `Product Behavior`: `Verified Pass`, `Verified Failure: Product Defect`, `Unverified Due to Blocker`, or `Not Evaluated`.
   - `Evidence Status`: report independently whether evidence is available, partial, blocked, or `Not Provided`.
+- **Detailed guidance:** load `references/manual-execution-and-evidence.md` for detailed session fields, evidence, oracle, triage, safety, and reporting rules.
 
 ## Responsibility And Boundaries
 
