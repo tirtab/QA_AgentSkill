@@ -1,0 +1,11 @@
+interface:
+  display_name: Manual Testing
+  short_description: Structured human-led execution with evidence-based results
+  default_prompt: Use $manual-testing for project-agnostic, technology-aware, capability-conditional manual execution; compare valid evidence with the oracle and report Product Behavior as a separate status from the deliverable and Evidence Status.
+policy:
+  allow_implicit_invocation: true
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
