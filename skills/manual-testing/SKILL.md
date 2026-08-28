@@ -27,7 +27,7 @@ Route work directly when needed to `writing-test-cases` for case design, `test-d
 ## Workflow
 
 1. Plan: objective, scope boundaries, risks, entry criteria, build and environment, data, oracle, capabilities, evidence channels, stop conditions, cleanup, and requested deliverable.
-2. Discover relevant project sources and supported capabilities. Select structured or exploratory execution; prioritize coverage by risk and technology.
+2. Discover project sources and capabilities; select structured, exploratory, or both as applicable, prioritizing risk and technology.
 3. Execute with a human observer. Record each structured step or timestamped exploratory action with expected and actual results. Stop safely at a blocker or unsafe state.
 4. Capture evidence as behavior occurs. Preserve identifiers and timestamps while redacting sensitive values.
 5. Compare valid execution evidence with the oracle and assign the exact Product Behavior status. Product Behavior is the comparison of valid execution evidence with the oracle, never a conclusion from a requirement, plan, checklist, or charter alone.
@@ -38,7 +38,7 @@ Route work directly when needed to `writing-test-cases` for case design, `test-d
 After discovery, include only supported and risk-relevant checks:
 
 - **UI/browser:** rendering, navigation, input, state transitions, accessibility, and supported browser or platform compatibility when a UI exists.
-- **API/contract:** method, status, headers, body, errors, authentication boundaries, schema, and contract behavior when an API exists.
+- **API/contract:** availability, malformed requests, method, status, headers, body, errors, auth boundaries, schema, and behavior when APIs exist.
 - **Database/persistence:** durable state, consistency, isolation, migrations, and audit state when persistence exists and approved observation is available.
 - **Messaging/async:** publication, consumption, ordering, retries, idempotency, eventual state, and failure routing when message flows exist.
 - **External-service:** sandbox, controlled double, contract, or authorized live interaction, clearly labeled by evidence level.
