@@ -75,6 +75,8 @@ Preserve the original observation and classify before assigning a product defect
 
 Capture the last known precondition, rerun only within the approved safe boundary, and compare with a controlled alternative when available. A missing selector, command, service, or data fixture alone does not justify `Verified Failure: Product Defect`.
 
+For selector/page-target failures, record one separate status for each category above; do not combine categories into one blocker label.
+
 ## Safety And Integration Boundaries
 
 Use synthetic, disposable, or test-owned data in an isolated approved boundary. Use approved masked non-production data only when its handling is authorized. Never copy unsafe production data, reveal credentials, or mutate shared records for convenience. For destructive behavior, obtain approval, use reversible or disposable fixtures, execute only the bounded number of runs needed, record identifiers, and clean records, queues, jobs, webhooks, audit artifacts, and other side effects. Verify cleanup; if cleanup cannot be performed, name the blocker and residual risk.
