@@ -47,7 +47,7 @@ Use these definitions in the runtime and test criteria:
 
 **Files:** verify the source worktree, the global baseline, the approved design, and available subagent support. Create only the three source directories after checks pass.
 
-- [ ] **Step 1: Verify the isolated source state**
+- [x] **Step 1: Verify the isolated source state**
 
 Run from `/home/tirta/.config/superpowers/worktrees/qa-agent-skills/pr-manual-testing`:
 
@@ -60,7 +60,7 @@ rtk ls skills
 
 Expected: branch is `pr/manual-testing`, the tree is clean, and `skills/manual-testing/` does not yet exist.
 
-- [ ] **Step 2: Read the approved design, hybrid contract, and baseline**
+- [x] **Step 2: Read the approved design, hybrid contract, and baseline**
 
 Read:
 
@@ -72,7 +72,7 @@ rtk read /home/tirta/.agents/skills/manual-testing/SKILL.md
 
 Use the existing global file only to identify migration gaps. Do not copy project-specific commands, credentials, routes, status labels, or tool assumptions.
 
-- [ ] **Step 3: Confirm isolated subagent support**
+- [x] **Step 3: Confirm isolated subagent support**
 
 Run:
 
@@ -83,7 +83,7 @@ rtk ls /home/tirta/.agents/skills/superpowers/writing-plans
 
 Confirm that fresh general-purpose agents can be dispatched. If isolated dispatch is unavailable, record the migration as blocked and do not substitute same-context self-testing.
 
-- [ ] **Step 4: Create the planned source directories**
+- [x] **Step 4: Create the planned source directories**
 
 Run:
 
@@ -186,7 +186,7 @@ Every scenario must require separate `Deliverable`, `Product Behavior`, and `Evi
 
 **File:** `skills/manual-testing/tests/baseline-results.md`
 
-- [ ] **Step 1: Dispatch one fresh agent per scenario**
+- [x] **Step 1: Dispatch one fresh agent per scenario**
 
 Use each exact prompt above with this neutral wrapper:
 
@@ -196,11 +196,11 @@ Do not load or read any manual-testing, qa-engineering, writing-test-cases, test
 
 Do not reveal the narrow criteria or expected answer. Agents must not read repository files, write files, or inspect another project.
 
-- [ ] **Step 2: Grade the RED observations**
+- [x] **Step 2: Grade the RED observations**
 
 Preserve raw output verbatim and grade each response against its narrow criterion and applicable Common QA Contract. Record the smallest missing rule for every failure. Require at least one concrete baseline failure before implementation continues.
 
-- [ ] **Step 3: Write and validate RED evidence**
+- [x] **Step 3: Write and validate RED evidence**
 
 Record the date, harness, agent type, model/tool limitation, exact prompt, pressures, neutral wrapper, task handle, loaded-file result, file-write result, raw response, narrow grading, full-contract grading, and baseline counts. Run:
 
@@ -211,7 +211,7 @@ rtk git diff --check
 
 The expected no-index non-zero result is acceptable only when the output has no whitespace error.
 
-- [ ] **Step 4: Commit RED evidence**
+- [x] **Step 4: Commit RED evidence**
 
 ```bash
 rtk git add skills/manual-testing/tests/scenarios.md skills/manual-testing/tests/baseline-results.md
@@ -223,7 +223,7 @@ rtk git commit -m "test: add manual testing red baseline"
 
 **Files:** `skills/manual-testing/SKILL.md`, `skills/manual-testing/references/manual-execution-and-evidence.md`, and `skills/manual-testing/agents/openai.yaml`.
 
-- [ ] **Step 1: Write the runtime entry point**
+- [x] **Step 1: Write the runtime entry point**
 
 Use this exact section order:
 
@@ -241,7 +241,7 @@ frontmatter
 
 The entry point must state that manual testing is human-led, project-agnostic, technology-aware, and capability-conditional. It must define oracle versus execution evidence, route specialists, reject invented commands and unsafe data, and keep `Deliverable`, `Product Behavior`, and `Evidence Status` separate. Keep it under 900 words.
 
-- [ ] **Step 2: Write the direct reference**
+- [x] **Step 2: Write the direct reference**
 
 Use these sections:
 
@@ -259,11 +259,11 @@ Use these sections:
 
 Define actual evidence fields, oracle precedence, conditional UI/API/database/messaging/external-service checks, exact integration evidence levels, blocker handling, reproducibility, safe data, and status semantics. Do not include project-specific paths, credentials, or mandatory tool commands.
 
-- [ ] **Step 3: Write runtime metadata**
+- [x] **Step 3: Write runtime metadata**
 
 Set `agents/openai.yaml` to display `Manual Testing`, describe structured human-led execution and evidence reporting, allow implicit invocation, and avoid project-specific prompts.
 
-- [ ] **Step 4: Run source checks**
+- [x] **Step 4: Run source checks**
 
 Run:
 
@@ -276,7 +276,7 @@ rtk grep -n "ABL|Accurate|Kafka|Laravel|PHP|Anata|routes/api.php|php artisan|har
 
 Expected: `SKILL.md` is under 900 words, no placeholder or project-specific leakage is present, and whitespace validation passes. Generic prohibited-data wording is allowed only when it describes what must not be used.
 
-- [ ] **Step 5: Commit the minimal source**
+- [x] **Step 5: Commit the minimal source**
 
 ```bash
 rtk git add skills/manual-testing/SKILL.md skills/manual-testing/references/manual-execution-and-evidence.md skills/manual-testing/agents/openai.yaml
@@ -288,7 +288,7 @@ rtk git commit -m "feat: add manual testing skill"
 
 **Files:** `skills/manual-testing/tests/verification-results.md` and `skills/manual-testing/tests/paired-source-manifest.sha256`; modify runtime source only for a demonstrated scenario loophole.
 
-- [ ] **Step 1: Freeze the paired source**
+- [x] **Step 1: Freeze the paired source**
 
 Record SHA-256 hashes for exactly:
 
@@ -299,7 +299,7 @@ skills/manual-testing/agents/openai.yaml
 skills/manual-testing/tests/scenarios.md
 ```
 
-- [ ] **Step 2: Dispatch paired GREEN agents**
+- [x] **Step 2: Dispatch paired GREEN agents**
 
 Use the same eight prompts and this canonical loading clause:
 
@@ -309,15 +309,15 @@ Load and follow only the canonical source skill `/home/tirta/.config/superpowers
 
 Preserve each task handle and raw output verbatim. Record loaded files and file-write result. Grade narrow criteria and full Common QA Contract separately.
 
-- [ ] **Step 3: Apply demonstrated loophole counters only**
+- [x] **Step 3: Apply demonstrated loophole counters only**
 
 If a scenario fails, preserve the failure, add the smallest explicit rule to the entry point or direct reference, update the manifest, and rerun the affected scenario plus all eight scenarios. If no scenario fails after the final source freeze, record that no counter rerun was needed.
 
-- [ ] **Step 4: Record final verification**
+- [x] **Step 4: Record final verification**
 
 Record per-scenario prompt, pressure, task handle, raw response, loaded files, narrow result, full-contract result, final status, source hashes, and final counts. Use `Product Behavior: Not Evaluated` when the scenario is guidance or no product execution occurred. Add the final marker only after all eight scenarios pass and the manifest validates.
 
-- [ ] **Step 5: Commit verification evidence**
+- [x] **Step 5: Commit verification evidence**
 
 ```bash
 rtk git add skills/manual-testing/tests/paired-source-manifest.sha256 skills/manual-testing/tests/verification-results.md
@@ -327,7 +327,7 @@ rtk git commit -m "test: record manual testing verification"
 
 ## Task 5: Final Source Verification
 
-- [ ] **Step 1: Validate the manifest and source contract**
+- [x] **Step 1: Validate the manifest and source contract**
 
 Run:
 
@@ -339,11 +339,11 @@ rtk git diff --check
 
 Expected: all manifest entries report `OK`, `SKILL.md` remains under 900 words, and no whitespace errors exist.
 
-- [ ] **Step 2: Validate scenarios and evidence completeness**
+- [x] **Step 2: Validate scenarios and evidence completeness**
 
 Confirm that `MT-S1` through `MT-S8` each have exact pressures, prompts, narrow criteria, raw RED output, raw GREEN output, task handles, loaded files, file-write results, narrow grading, full-contract grading, final outcome, and status separation.
 
-- [ ] **Step 3: Review cross-skill boundaries**
+- [x] **Step 3: Review cross-skill boundaries**
 
 Confirm that manual execution routes test cases, data, UI automation, integration, regression, planning, and defect artifacts to their specialists. Confirm no other skill changed:
 
@@ -355,11 +355,11 @@ Only the manual-testing skill, its migration design/plan, and its repository evi
 
 ## Task 6: Deploy And Prepare The Skill PR
 
-- [ ] **Step 1: Audit the legacy runtime collision**
+- [x] **Step 1: Audit the legacy runtime collision**
 
 Review `/home/tirta/.agents/skills/manual-testing/SKILL.md`. Confirm the old project-specific content is being replaced intentionally and that no runtime consumer requires its unsupported assumptions.
 
-- [ ] **Step 2: Mirror the explicit runtime allowlist**
+- [x] **Step 2: Mirror the explicit runtime allowlist**
 
 Deploy only:
 
@@ -371,7 +371,7 @@ skills/manual-testing/agents/openai.yaml
 
 Do not deploy `skills/manual-testing/tests/` or migration documentation.
 
-- [ ] **Step 3: Verify source/runtime equality**
+- [x] **Step 3: Verify source/runtime equality**
 
 Run:
 
@@ -384,7 +384,7 @@ rtk ls /home/tirta/.agents/skills/manual-testing
 
 Expected: all comparisons pass and runtime contains only `SKILL.md`, `references/`, and `agents/`.
 
-- [ ] **Step 4: Record deployment evidence**
+- [x] **Step 4: Record deployment evidence**
 
 Append deployment inventory, source/runtime hashes, legacy collision result, excluded-tests confirmation, and the final marker to `verification-results.md`. Commit:
 
