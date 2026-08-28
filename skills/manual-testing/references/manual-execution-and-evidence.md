@@ -38,6 +38,8 @@ Use channels conditionally and label their limits:
 
 - UI/browser: redacted screenshots or video, visible state, navigation result, accessibility observation, and relevant console or network record.
 - API/contract: availability, malformed requests, request and response capture, status, headers, body, error, correlation identifier, and comparison with the current schema or contract.
+
+For API scenarios, state availability and malformed-request behavior explicitly, even when no input is described.
 - Database/persistence: approved read-only observation, before and after state, record identifier, transaction or audit evidence, and isolation result. Never expose sensitive values.
 - Messaging/async: producer and consumer observations, message metadata, correlation identifiers, timestamps, retry or failure-route records, and eventual state. Use the project's documented wait or completion signal rather than a fixed delay.
 - External service: request and response, service identifier, sandbox or double designation, correlation record, and downstream outcome.
