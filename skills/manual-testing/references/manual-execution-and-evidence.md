@@ -15,6 +15,8 @@ Record concrete fields before execution:
 
 Unknown fields are not guesses. Record `Not Provided` when information or capability was not supplied, or name the blocker when it prevents execution.
 
+When scope or risk is open, state how structured steps and exploratory coverage will both be used; otherwise explain why one mode applies.
+
 ## Exploratory Charters
 
 A charter should state its mission in one sentence, the question or goal, timebox, time allocation, scope boundary, risk hypotheses, starting state, allowed data, environment boundary, available capabilities, approach or tours, and oracle. During the session, make notes timestamped and reproducible: action, input or state change, expected result, actual observation, identifier, evidence channel, and deviation. Record pauses, blockers, follow-up ideas, reset steps, cleanup, and remaining scope. A charter permits adaptive investigation but not unstructured clicking or an implied pass.
