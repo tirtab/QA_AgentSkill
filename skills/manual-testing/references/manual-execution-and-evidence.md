@@ -68,18 +68,21 @@ Report the axes separately. For example, a complete report with no run can be `D
 
 Preserve the original observation and classify before assigning a product defect:
 
-- **Product behavior:** reproducible mismatch in the expected product state with a valid oracle.
+- **Product or page:** reproducible mismatch in the expected product state with a valid oracle, or an unavailable page target.
 - **Requirement or oracle:** ambiguity, conflict, stale source, or missing expected result.
 - **Environment, access, or deployment:** unavailable build, permission, feature flag, target, or service.
 - **Data or setup:** invalid fixture, wrong state, contamination, or missing precondition.
-- **Tool, selector, or evidence channel:** unavailable target, capture failure, or observation limitation.
+- **Selector:** unavailable or mismatched selector or page target.
+- **Automation:** brittle locator, interaction, or harness failure.
+- **Evidence channel:** capture failure or observation limitation.
 - **Dependency or external service:** partner outage, unsuitable double, contract mismatch, or downstream failure.
 - **Timing or async:** race, timeout, eventual state, retry, or missing completion signal.
-- **Safety or observability:** operation cannot be authorized safely, or logs and audit evidence are insufficient.
+- **Safety:** operation cannot be authorized safely.
+- **Observability:** logs and audit evidence are insufficient.
 
 Capture the last known precondition, rerun only within the approved safe boundary, and compare with a controlled alternative when available. A missing selector, command, service, or data fixture alone does not justify `Verified Failure: Product Defect`.
 
-For selector/page-target failures, record one separate status for each category above; do not combine categories into one blocker label.
+For selector/page-target failures, record one separate status for each category above; do not combine categories into one blocker label. Use one line each for Selector, Automation, Product/page, Data/setup, Environment/access, Dependency, Timing/async, Requirement/oracle, Evidence channel, Safety, and Observability.
 
 ## Safety And Integration Boundaries
 
