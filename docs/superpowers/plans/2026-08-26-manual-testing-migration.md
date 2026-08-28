@@ -394,7 +394,7 @@ rtk git diff --cached --check
 rtk git commit -m "docs: record manual testing deployment"
 ```
 
-- [ ] **Step 5: Push the dedicated branch**
+- [x] **Step 5: Push the dedicated branch**
 
 Before pushing, inspect status, recent commits, remote, and the diff from `origin/main`:
 
