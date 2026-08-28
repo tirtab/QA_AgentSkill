@@ -84,6 +84,8 @@ Capture the last known precondition, rerun only within the approved safe boundar
 
 For selector/page-target failures, record one separate status for each category above; do not combine categories into one blocker label. Use one line each for Selector, Automation, Product/page, Data/setup, Environment/access, Dependency, Timing/async, Requirement/oracle, Evidence channel, Safety, and Observability.
 
+Use the exact `Not Provided` value for unknown categories; do not substitute synonyms such as `Not determined`, `Unknown`, or `N/A`.
+
 ## Safety And Integration Boundaries
 
 Use synthetic, disposable, or test-owned data in an isolated approved boundary. Use approved masked non-production data only when its handling is authorized. Never copy unsafe production data, reveal credentials, or mutate shared records for convenience. For destructive behavior, obtain approval, use reversible or disposable fixtures, execute only the bounded number of runs needed, record identifiers, and clean records, queues, jobs, webhooks, audit artifacts, and other side effects. Verify cleanup; if cleanup cannot be performed, name the blocker and residual risk.
