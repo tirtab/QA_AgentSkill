@@ -31,7 +31,7 @@ Route work directly when needed to `writing-test-cases` for case design, `test-d
 3. Execute with a human observer. Record each structured step or timestamped exploratory action with expected and actual results. Stop safely at a blocker or unsafe state.
 4. Capture evidence as behavior occurs. Preserve identifiers and timestamps while redacting sensitive values.
 5. Compare valid execution evidence with the oracle and assign the exact Product Behavior status. Product Behavior is the comparison of valid execution evidence with the oracle, never a conclusion from a requirement, plan, checklist, or charter alone.
-6. For selector/page-target failures, triage selector/automation, product/page, data, environment/access, dependency, timing, requirement, and observability causes before any Product Defect status; report the named blocker and unexecuted scope, and rerun only within the safe boundary.
+6. For every selector/page-target failure, explicitly enumerate selector/automation, product/page, data, environment/access, dependency, timing, requirement, and observability causes with their status; do not collapse them into one blocker label. Report the named blocker and unexecuted scope, and rerun only within the safe boundary before any Product Defect status.
 
 ## Conditional Technology Checks
 
