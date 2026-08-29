@@ -455,7 +455,7 @@ Confirm Markdown-first then XLSX output, both artifacts by default, conditional 
 - Mirror: `/home/tirta/qa-agent-skills/skills/writing-test-cases/agents/` to `/home/tirta/.agents/skills/writing-test-cases/agents/`
 - Do not deploy: `/home/tirta/qa-agent-skills/skills/writing-test-cases/tests/`
 
-- [ ] **Step 1: Inspect the existing runtime destination**
+- [x] **Step 1: Inspect the existing runtime destination**
 
 Run:
 
@@ -467,7 +467,7 @@ rtk find /home/tirta/.agents/skills/writing-test-cases
 
 Read every existing file under the three planned runtime areas. Stop for review if any file is unexpected, user-maintained, or has unknown provenance. Do not overwrite uncertainty.
 
-- [ ] **Step 2: Verify source prerequisite and create approved runtime directories**
+- [x] **Step 2: Verify source prerequisite and create approved runtime directories**
 
 Only after Task 5 passes and collision review is complete, run:
 
@@ -477,11 +477,11 @@ rtk mkdir -p /home/tirta/.agents/skills/writing-test-cases/references /home/tirt
 rtk ls /home/tirta/.agents/skills/writing-test-cases
 ```
 
-- [ ] **Step 3: Mirror only the three planned runtime files**
+- [x] **Step 3: Mirror only the three planned runtime files**
 
 Use `apply_patch` to create or update only `SKILL.md`, `references/test-case-schema-and-formats.md`, and `agents/openai.yaml`. Never use `cp`, `rsync`, shell redirection, or deploy `tests/`.
 
-- [ ] **Step 4: Compare source and runtime**
+- [x] **Step 4: Compare source and runtime**
 
 Run:
 
@@ -494,7 +494,7 @@ rtk ls /home/tirta/.agents/skills/writing-test-cases
 
 Expected: all comparisons return success, and the runtime inventory contains exactly `SKILL.md`, `references/test-case-schema-and-formats.md`, and `agents/openai.yaml`, with no `tests/` directory.
 
-- [ ] **Step 5: Record deployment evidence**
+- [x] **Step 5: Record deployment evidence**
 
 Append pre-deployment inventory, post-deployment inventory, source/runtime hashes, apply-patch targets, deployment date, source manifest identity, and excluded-tests confirmation to `verification-results.md`, then commit only that evidence update:
 

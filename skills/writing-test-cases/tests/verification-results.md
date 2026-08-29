@@ -1757,4 +1757,24 @@ Evidence Status: Repository evidence: Not Provided; no execution evidence; contr
 Skill Tests: Passed (9/9 scenario-specific decision criteria and 9/9 full-contract applicability criteria)
 ```
 
-The fresh RED rerun handles and raw responses are retained in the session; the original RED baseline remains the acceptance gate. Baseline duplicate-handle correction and current RED append are still pending.
+Fresh RED rerun handles and raw responses are recorded in `baseline-results.md`; the original RED baseline remains the acceptance gate and the earlier duplicate-handle issue is superseded by the unique rerun handles.
+
+## Deployment Evidence (2026-08-29)
+
+- Source root: `/home/tirta/.config/superpowers/worktrees/qa-agent-skills/pr-writing-test-cases/skills/writing-test-cases`
+- Source commit: `6488544` on `pr/writing-test-cases`.
+- Runtime destination: `/home/tirta/.agents/skills/writing-test-cases`
+- Pre-deployment inventory: exactly `SKILL.md`, `references/test-case-schema-and-formats.md`, and `agents/openai.yaml`; no `tests/` directory.
+- Pre-deployment SHA-256: `SKILL.md` `bee34e1eb8ac1045a2c82c610f6becf4cc9075519aad2e55546d4f9f075bc154`; reference `634d6e99a8c8aaf0de077b401b2d92b9f639a3dc6da2d1cd1f5f19c2a4bff63d`; `agents/openai.yaml` `9c7775c36443b211bcf19af0762e89e565e9da8170f52605d1fbf84a630d369b`.
+- Collision review: existing runtime files are the same approved skill path and were replaced with the current PR source snapshot.
+- Apply-patch targets: only `SKILL.md`, `references/test-case-schema-and-formats.md`, and `agents/openai.yaml`.
+- Source tests and evidence were excluded and not deployed.
+- Post-deployment inventory: exactly `/home/tirta/.agents/skills/writing-test-cases/SKILL.md`, `/home/tirta/.agents/skills/writing-test-cases/references/test-case-schema-and-formats.md`, and `/home/tirta/.agents/skills/writing-test-cases/agents/openai.yaml`.
+- Post-deployment source/runtime SHA-256 pairs:
+  - `SKILL.md`: `52ec56362a0218d9524560b426055cbd40374b8d0b3904a01d6b6823fe647945` / `52ec56362a0218d9524560b426055cbd40374b8d0b3904a01d6b6823fe647945`.
+  - `references/test-case-schema-and-formats.md`: `ea373e025d6304ecf3ca6b0010c85c2f3cd8ce4db75c8a2727bafdc88de383e0` / `ea373e025d6304ecf3ca6b0010c85c2f3cd8ce4db75c8a2727bafdc88de383e0`.
+  - `agents/openai.yaml`: `9c7775c36443b211bcf19af0762e89e565e9da8170f52605d1fbf84a630d369b` / `9c7775c36443b211bcf19af0762e89e565e9da8170f52605d1fbf84a630d369b`.
+- Manifest identity: `skills/writing-test-cases/tests/paired-source-manifest.sha256`; manifest SHA-256 `bf0ca19719db9117ac49ecc8435cffab033974ffd7012912a6f3d7bbc92c0273`.
+- `sha256sum -c` returned `OK` for all four manifest entries.
+- `cmp -s` passed for all three source/runtime pairs.
+- Runtime contains no `tests/` directory or files.
