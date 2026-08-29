@@ -38,7 +38,7 @@ Do not deploy or commit runtime/source implementation changes until the RED/GREE
 - Verify: `/home/tirta/.agents/skills/writing-test-cases/SKILL.md`
 - Create directories only after the checks below: `skills/writing-test-cases/tests`, `skills/writing-test-cases/references`, `skills/writing-test-cases/agents`
 
-- [ ] **Step 1: Verify the source repository and clean starting state**
+- [x] **Step 1: Verify the source repository and clean starting state**
 
 Run from `/home/tirta/qa-agent-skills`:
 
@@ -51,7 +51,7 @@ rtk ls skills
 
 Expected: the repository is `/home/tirta/qa-agent-skills`, the working tree is clean or any concurrent changes are reviewed before editing, and `skills/writing-test-cases/` does not yet exist.
 
-- [ ] **Step 2: Read the approved design and related contracts**
+- [x] **Step 2: Read the approved design and related contracts**
 
 Read:
 
@@ -64,7 +64,7 @@ rtk read /home/tirta/.agents/skills/writing-test-cases/SKILL.md
 
 Use the existing global file only as a baseline. Do not copy Anata, ABL, Laravel, PHP, or organization-specific assumptions.
 
-- [ ] **Step 3: Verify isolated-agent support**
+- [x] **Step 3: Verify isolated-agent support**
 
 Run:
 
@@ -75,7 +75,7 @@ rtk ls /home/tirta/.agents/skills/superpowers/writing-skills
 
 Confirm that fresh general-purpose subagents can be dispatched. If isolated dispatch or required workflow skills are unavailable, stop and record the migration as blocked; do not substitute same-context self-testing.
 
-- [ ] **Step 4: Create source directories**
+- [x] **Step 4: Create source directories**
 
 Only after Steps 1-3 pass, run:
 
@@ -92,7 +92,7 @@ Expected: the three directories exist and contain no authored files.
 - Create: `skills/writing-test-cases/tests/scenarios.md`
 - Create: `skills/writing-test-cases/tests/baseline-results.md` after the RED run
 
-- [ ] **Step 1: Create the stable scenario specification**
+- [x] **Step 1: Create the stable scenario specification**
 
 Create `skills/writing-test-cases/tests/scenarios.md` with these nine scenarios, preserving IDs, prompt text, pressure labels, and pass criteria exactly.
 
@@ -186,7 +186,7 @@ Exact prompt:
 
 Narrow criteria: keep Markdown plus XLSX as the writing-test-cases default; state that Karate-specific executable scenarios and execution details belong to `karate-framework` or `karate-crud-web-testing` when requested; do not impose BDD/Gherkin or Karate universally.
 
-- [ ] **Step 2: Run a scenario-structure check**
+- [x] **Step 2: Run a scenario-structure check**
 
 Run:
 
@@ -202,7 +202,7 @@ Expected: each stable ID appears and every scenario has a prompt, pressure list,
 **Files:**
 - Create: `skills/writing-test-cases/tests/baseline-results.md`
 
-- [ ] **Step 1: Run each scenario without the new skill**
+- [x] **Step 1: Run each scenario without the new skill**
 
 Dispatch one fresh general-purpose subagent per scenario. Give each exact scenario prompt and this neutral instruction:
 
@@ -212,11 +212,11 @@ Do not load or read any writing-test-cases, qa-engineering, or other QA skill. R
 
 Do not tell the baseline agent the expected answer beyond the scenario prompt. Preserve each raw response, task handle, harness, model limitation, execution date, and loaded-file result.
 
-- [ ] **Step 2: Grade the RED output**
+- [x] **Step 2: Grade the RED output**
 
 Grade each response against its narrow criteria and record the exact unsafe, incomplete, project-specific, or status-confused decision. At least one real baseline failure or unsafe rationalization is required before implementation. If all nine pass without the source skill, stop and record `NEEDS_REVIEW: no demonstrated skill change justified`; do not author or deploy the skill until a design owner approves proceeding.
 
-- [ ] **Step 3: Write baseline evidence**
+- [x] **Step 3: Write baseline evidence**
 
 Create `baseline-results.md` with:
 
@@ -227,7 +227,7 @@ Create `baseline-results.md` with:
 - observed rationalization and the smallest rule needed to close it;
 - baseline count as `x/9` scenario-specific and `y/9` full-contract, without rewriting raw output.
 
-- [ ] **Step 4: Verify the baseline file**
+- [x] **Step 4: Verify the baseline file**
 
 Run:
 
@@ -238,7 +238,7 @@ rtk git diff --no-index --check /dev/null skills/writing-test-cases/tests/baseli
 
 Expected: every scenario has a concrete decision and raw evidence; the expected non-zero no-index difference has no whitespace error.
 
-- [ ] **Step 5: Commit the RED evidence**
+- [x] **Step 5: Commit the RED evidence**
 
 After confirming the RED gate, commit only the scenario and baseline files:
 
@@ -255,7 +255,7 @@ rtk git commit -m "test: add writing test cases red baseline"
 - Create: `skills/writing-test-cases/references/test-case-schema-and-formats.md`
 - Create: `skills/writing-test-cases/agents/openai.yaml`
 
-- [ ] **Step 1: Create the concise entry point**
+- [x] **Step 1: Create the concise entry point**
 
 Create `SKILL.md` with frontmatter exactly using `name: writing-test-cases` and a third-person `Use when` description. Keep the file under 900 words and include these sections in this order:
 
@@ -284,7 +284,7 @@ Do not persist secrets, unsafe production data, or unsupported requirements.
 
 Use the direct reference for field-level and workbook details instead of duplicating the full schema in `SKILL.md`.
 
-- [ ] **Step 2: Create the generic schema reference**
+- [x] **Step 2: Create the generic schema reference**
 
 Create `test-case-schema-and-formats.md` with these exact headings:
 
@@ -311,7 +311,7 @@ It must define a `Summary` sheet with `Group`, `Case Count`, `Dominant Priority`
 
 It must define risk-based conditional categories, current requirement/API/schema oracle precedence, Requirement Ambiguity, separate severity/priority logic, blocker handling, no unsupported product pass, and no invented data. It must explicitly say that BDD/Gherkin is optional on explicit request and Karate belongs to the Karate specialist when applicable.
 
-- [ ] **Step 3: Create generic runtime metadata**
+- [x] **Step 3: Create generic runtime metadata**
 
 Create `agents/openai.yaml` with:
 
@@ -329,7 +329,7 @@ interface:
     - atlas
 ```
 
-- [ ] **Step 4: Run source structure checks**
+- [x] **Step 4: Run source structure checks**
 
 Run:
 
@@ -342,7 +342,7 @@ rtk grep -n -e "ABL" -e "Accurate" -e "Kafka" -e "Laravel" -e "PHP" -e "Anata" -
 
 Expected: all planned runtime files exist, `SKILL.md` is at most 900 words, and both scans return zero matches. Intentional leakage mentions belong only in test evidence or plan/spec documentation, not runtime files.
 
-- [ ] **Step 5: Commit the first source implementation**
+- [x] **Step 5: Commit the first source implementation**
 
 Run:
 
@@ -359,7 +359,7 @@ rtk git commit -m "feat: migrate writing test cases skill"
 - Create or modify: `skills/writing-test-cases/tests/paired-source-manifest.sha256`
 - Modify runtime source files only when a demonstrated scenario loophole requires it.
 
-- [ ] **Step 1: Freeze source identity before paired dispatch**
+- [x] **Step 1: Freeze source identity before paired dispatch**
 
 Run:
 
@@ -370,7 +370,7 @@ rtk sha256sum -c skills/writing-test-cases/tests/paired-source-manifest.sha256
 
 Record the manifest output, creation date, and source identity in `verification-results.md`. Do not edit the four hashed files between freeze and paired dispatch.
 
-- [ ] **Step 2: Run the nine GREEN scenarios**
+- [x] **Step 2: Run the nine GREEN scenarios**
 
 Dispatch a fresh general-purpose subagent for each exact scenario prompt with this neutral wrapper:
 
@@ -380,7 +380,7 @@ Load and follow /home/tirta/qa-agent-skills/skills/writing-test-cases/SKILL.md a
 
 The only difference from RED is the canonical skill-loading clause. Do not explicitly tell the agent the expected coverage categories, output format, or status answer beyond the scenario prompt. Preserve raw output, exact prompt, task handle, harness, execution date, model limitation, and loaded-file list.
 
-- [ ] **Step 3: Grade narrow criteria and Common QA Contract separately**
+- [x] **Step 3: Grade narrow criteria and Common QA Contract separately**
 
 For every scenario, record:
 
@@ -397,15 +397,15 @@ The expected final marker is:
 Skill Tests: Passed (9/9 scenario-specific decision criteria and 9/9 full-contract applicability criteria)
 ```
 
-- [ ] **Step 4: Refactor only demonstrated gaps**
+- [x] **Step 4: Refactor only demonstrated gaps**
 
 If a scenario fails, preserve its exact raw output and add the smallest explicit counter to `SKILL.md` or the direct reference. Do not add a rule solely to force a literal format in a mode where it is not required. Update the source manifest after the source edit, rerun the affected scenario, and then rerun all nine scenarios.
 
-- [ ] **Step 5: Record the paired evidence**
+- [x] **Step 5: Record the paired evidence**
 
 `verification-results.md` must contain the current result index, RED/GREEN/refactor labels, raw outputs, criterion quotes, observed rationalizations, source hashes, full-contract grading, final marker, and no-deployment status. Keep historical failed runs visible and label superseded results clearly.
 
-- [ ] **Step 6: Commit verified source evidence**
+- [x] **Step 6: Commit verified source evidence**
 
 After all nine scenarios pass and the manifest is current, run:
 
@@ -422,7 +422,7 @@ rtk git commit -m "test: verify writing test cases migration"
 - Verify: `docs/superpowers/specs/2026-08-19-writing-test-cases-migration-design.md`
 - Verify: `docs/superpowers/plans/2026-08-19-writing-test-cases-migration.md`
 
-- [ ] **Step 1: Run source manifest and whitespace checks**
+- [x] **Step 1: Run source manifest and whitespace checks**
 
 Run:
 
@@ -439,11 +439,11 @@ rtk git diff --check
 
 The no-index commands normally return status 1 because the files differ from `/dev/null`; accept that status only when no whitespace error appears.
 
-- [ ] **Step 2: Verify final evidence completeness**
+- [x] **Step 2: Verify final evidence completeness**
 
 Read `baseline-results.md`, `verification-results.md`, and the manifest. Confirm all nine scenarios have exact prompts, pressure labels, raw output, task handles, model limitations, loaded files, narrow grading, full-contract grading, and final outcomes. Confirm the final result is 9/9 and no current section relies on stale source hashes.
 
-- [ ] **Step 3: Review the source against the design**
+- [x] **Step 3: Review the source against the design**
 
 Confirm Markdown-first then XLSX output, both artifacts by default, conditional coverage, no BDD/Gherkin default, Karate delegation, oracle precedence, status separation, data safety, and no project leakage. Confirm no other Specialist Skill was modified.
 

@@ -2,7 +2,7 @@
 
 ## Output Modes
 
-Artifact mode creates requested test cases. Unless the user requests another format, draft and validate Markdown first, convert it to XLSX, and return both. A triage-, classification-, or planning-only response has `Deliverable: Not Applicable` when no artifact is requested. BDD/Gherkin is only on explicit request. Karate is not a universal output; Karate-specific executable design and execution belong to Karate specialists.
+Artifact mode creates requested test cases. Unless the user requests another format, draft and validate Markdown first, convert it to XLSX, and return both. This default still applies to response-only guidance; if XLSX cannot be materialized, report `Deliverable: Incomplete`, name the conversion blocker, and never claim `Complete`. A triage-, classification-, or planning-only response has `Deliverable: Not Applicable` when no artifact is requested. BDD/Gherkin is only on explicit request. Karate is not a universal output; Karate-specific executable design and execution belong to Karate specialists.
 
 ## Markdown Canonical Format
 
@@ -24,7 +24,7 @@ Use short, unique, Excel-safe sheet names: avoid reserved characters, excessive 
 
 ## Risk-Based Coverage
 
-Coverage is conditional, not a mandatory checklist. Consider happy path, validation, authorization, security, edge, data integrity, integration, reliability, performance, contract, and end-to-end categories only when supported by the feature, current oracle, user scope, or material risk. Omit categories with no applicable behavior or risk and state why.
+Coverage is conditional, not a mandatory checklist. Consider happy path, validation, authorization, security, edge, data integrity, integration, reliability, performance, contract, and end-to-end categories only when supported by the feature, current oracle, user scope, or material risk. For an API or contract feature, retain availability and malformed-request behavior when request handling exists; record missing details as `Not Provided` rather than silently omitting the check. Omit categories with no applicable behavior or risk and state why.
 
 Severity describes consequence; priority describes test or remediation urgency. Assess priority from impact, exposure, dependency, urgency, and available workaround. A deadline may inform priority only with impact and exposure evidence; it does not automatically make a case P1 or change severity. Treat a supported blocker as a blocker, not as a product defect or a pass.
 
@@ -32,13 +32,13 @@ Severity describes consequence; priority describes test or remediation urgency. 
 
 Use oracle precedence in this order: current requirement or acceptance criterion first; then the current API, event, schema, or other contract; then maintained domain documentation. Implementation and configuration are behavior clues and can identify a risk, but do not override the first oracle automatically.
 
-When sources conflict or their authority or recency cannot be established, record `Requirement Ambiguity`, preserve the competing statements, and avoid an invented expected result or product classification. Link each case to the relevant requirement or source where available, and keep the stable case ID through Markdown and XLSX.
+When sources conflict or their authority or recency cannot be established, record `Requirement Ambiguity`, preserve the competing statements, and avoid an invented expected result or product classification. Link each case to the relevant requirement or source where available, and keep the stable case ID through Markdown and XLSX. When only the canonical skill and direct reference are loaded, do not claim README, repository, implementation, or framework evidence unless it was supplied in the prompt; report it `Not Provided`.
 
 ## Status And Execution Semantics
 
 Case-level `Status` values are only `Pass`, `Fail`, and `Not Run`. New or unexecuted cases use `Not Run`. A blocked attempted case remains `Not Run`; document the blocker in `Notes` and state the affected evidence scope. `Pass` means the executed case met its expected result. `Fail` means observed execution contradicted the expected result. Neither case value alone establishes `Product Behavior: Verified Failure: Product Defect`.
 
-Report-level axes are separate:
+Every response must end with these separate report-level axes:
 
 - Deliverable: `Complete`, `Incomplete`, or `Not Applicable`.
 - Product Behavior: `Verified Pass`, `Verified Failure: Product Defect`, `Unverified Due to Blocker`, or `Not Evaluated`.

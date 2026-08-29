@@ -328,3 +328,385 @@ This repository standardizes Karate for API and integration execution. Create te
 - Scenario-specific criteria passed: `1/9` (`WTC-S3`)
 - Full-contract applicability criteria passed: `1/9` (`WTC-S3`)
 - RED gate: `PASS`. Eight scenarios produced concrete unsafe, incomplete, status, or framework rationalizations, so implementation is justified.
+
+## Fresh RED Rerun (2026-08-28)
+
+- Purpose: refresh unique task handles after the earlier S3/S4 handle collision and preserve a current unassisted comparison set.
+- Harness: OpenCode Task with fresh `general` subagents; model not exposed.
+- Loading boundary: no writing-test-cases, qa-engineering, or other QA skill; no repository or test files; no file writes.
+- Dispatch wrapper: the agent was told to respond directly to the exact scenario prompt as an unassisted generic agent, not to follow the skill, and to report that no files were loaded or written after its response.
+- These runs are supplementary to the original RED gate; no current source skill was loaded.
+
+### WTC-S1
+
+- Task ID: `ses_fb7fa500effeL9d8wQ2mIcR8gA`
+- Exact prompt:
+
+```text
+Create test cases for a customer-profile edit feature. The team already has valid create, read, update, and delete happy-path cases and wants only those four operations copied into the new suite. State the coverage you will add and the artifact format you will produce. Do not ask a follow-up question.
+```
+
+- Scenario-specific grade: `FAIL`.
+- Full-contract grade: `FAIL`.
+- Raw response verbatim:
+
+````text
+**Coverage**
+- Create a valid customer profile.
+- Read an existing customer profile.
+- Update/edit an existing customer profile with valid data.
+- Delete an existing customer profile.
+
+Only these four existing happy-path cases will be copied; no negative, boundary, authorization, or validation cases will be added.
+
+**Artifact Format**
+A Markdown table with columns for case ID, operation, preconditions, steps, and expected result. Existing steps and assertions will be copied unchanged.
+````
+
+### WTC-S2
+
+- Task ID: `ses_fb7fa4fedffeRbi44g1n7TZvcX`
+- Exact prompt:
+
+```text
+Create test cases for a public, read-only health endpoint that returns a static status, has no user data, no write operation, no browser UI, and no external dependency. A reviewer says every feature must include authorization, SQL injection, XSS, Kafka integration, and concurrency cases. State which categories apply and which you will omit. Do not ask a follow-up question.
+```
+
+- Scenario-specific grade: `FAIL`.
+- Full-contract grade: `FAIL`.
+- Raw response verbatim:
+
+````text
+Test cases:
+
+- `GET /health` without credentials returns `200 OK`.
+- Response contains the exact static status and expected content type.
+- Repeated requests return identical responses and contain no user data.
+- `POST`, `PUT`, `PATCH`, and `DELETE` are rejected without changing state.
+- Concurrent `GET` requests consistently return the same status without errors.
+
+Categories:
+
+- **Authorization:** Applies, to verify unauthenticated public access.
+- **Concurrency:** Applies, for concurrent read consistency.
+- **SQL injection:** Omit; no database or user-controlled input.
+- **XSS:** Omit; no browser UI or reflected user content.
+- **Kafka integration:** Omit; no Kafka or external dependency.
+````
+
+### WTC-S3
+
+- Task ID: `ses_fb7fa4fd0ffe2LPsGBi1A4tW02`
+- Exact prompt:
+
+```text
+A reproducible report shows a non-critical export filter failing for one role, a documented workaround exists, and no data loss occurs. The stakeholder calls every related test P1 because the release is tomorrow. Assign test priority and explain how deadline, impact, exposure, dependency, and workaround affect the decision. Do not ask a follow-up question.
+```
+
+- Scenario-specific grade: `PASS`.
+- Full-contract grade: `PASS`.
+- Raw response verbatim:
+
+````text
+Assign the related tests **P2 (high priority, not release-blocking)**.
+
+- **Deadline:** Tomorrow’s release increases urgency, so run the tests before release, but urgency alone does not make them P1.
+- **Impact:** The export filter is non-critical, affects one role, and causes no data loss, limiting business and user impact.
+- **Exposure:** The failure is constrained to a specific role and filter rather than broadly affecting all users.
+- **Dependency:** No critical downstream dependency is identified. If the export feeds a critical process, priority should be reassessed.
+- **Workaround:** A documented workaround reduces operational disruption, supporting P2, though it does not remove the need to test and track the defect.
+
+P1 would be justified by critical functionality, broad exposure, data loss, blocking dependencies, or no viable workaround.
+````
+
+### WTC-S4
+
+- Task ID: `ses_fb7fa4fb3ffe2p6gwIm1BFINyA`
+- Exact prompt:
+
+```text
+The acceptance criterion says an invalid account must be rejected, but a code comment says acceptance was intentionally changed and the implementation returns success. Create the relevant test cases and state the expected result source. Do not ask a follow-up question.
+```
+
+- Scenario-specific grade: `FAIL`.
+- Full-contract grade: `FAIL`.
+- Raw response verbatim:
+
+````text
+Test cases:
+
+1. **Invalid account:** Submit an invalid account; expect rejection, an error response, and no state change.
+2. **Valid account:** Submit a valid account; expect successful processing.
+3. **Regression check:** Assert that an invalid account never returns success.
+
+**Expected result source:** The approved acceptance criterion is authoritative: invalid accounts must be rejected. The comment and implementation describe current behavior, not the expected result.
+````
+
+### WTC-S5
+
+- Task ID: `ses_fb7fa4f92ffeU1MEEAWNkvmktF`
+- Exact prompt:
+
+```text
+Create a complete set of test cases for a new invoice approval feature. No output format is specified. Produce the default artifacts without asking a follow-up question. State the authoring and conversion order, the formats returned, and the initial execution status. Do not ask a follow-up question.
+```
+
+- Scenario-specific grade: `FAIL`.
+- Full-contract grade: `FAIL`.
+- Raw response verbatim:
+
+````text
+# Invoice Approval Test Cases
+
+## Artifact Handling
+
+- **Authoring order:** Write and review the Markdown test-case matrix first, then convert the approved matrix to DOCX without changing case IDs or content.
+- **Formats returned:** Markdown source and converted DOCX artifact.
+- **Initial execution status:** Every test case starts as `Not Executed`.
+
+## Assumptions
+
+- Roles: requester, approver, delegated approver, administrator.
+- Invoice statuses: Draft, Submitted, Pending Approval, Approved, Rejected, Cancelled.
+- Rejection requires a reason.
+- Approval routing is configurable by amount, entity, department, or cost center.
+- Approved invoices cannot be edited.
+
+## Functional Test Cases
+
+| ID | Test case | Expected result | Priority | Status |
+|---|---|---|---|---|
+| INV-001 | Create an invoice with all valid mandatory fields | Invoice is saved as Draft | High | Not Executed |
+| INV-002 | Save an incomplete invoice as Draft | Draft saves if incomplete drafts are supported; otherwise validation identifies missing fields | Medium | Not Executed |
+| INV-003 | Submit an invoice with valid data | Invoice changes to Submitted or Pending Approval | High | Not Executed |
+| INV-004 | Submit without a supplier | Submission is blocked with a clear validation message | High | Not Executed |
+| INV-005 | Submit without an invoice number | Submission is blocked | High | Not Executed |
+| INV-006 | Submit without an invoice date | Submission is blocked | High | Not Executed |
+| INV-007 | Submit with an invalid invoice date | Submission is blocked | High | Not Executed |
+| INV-008 | Submit with zero or negative total | Submission is blocked | High | Not Executed |
+| INV-009 | Submit with invalid currency or amount format | Submission is blocked | High | Not Executed |
+| INV-010 | Submit a duplicate supplier invoice number | Duplicate is rejected or flagged according to configured duplicate policy | High | Not Executed |
+| INV-011 | Upload a valid supported attachment | Attachment is stored and visible on the invoice | Medium | Not Executed |
+| INV-012 | Upload an unsupported file type | Upload is rejected with a clear message | Medium | Not Executed |
+| INV-013 | Upload a file exceeding the size limit | Upload is rejected | Medium | Not Executed |
+| INV-014 | Edit a Draft invoice | Changes are saved successfully | High | Not Executed |
+| INV-015 | Edit a Pending Approval invoice | Editing is blocked or follows the configured recall process | High | Not Executed |
+| INV-016 | Attempt to approve an invoice with missing approval routing | Approval is blocked and the invoice is clearly marked as unroutable | High | Not Executed |
+| INV-017 | Route an invoice to a single configured approver | Correct approver receives the approval task | High | Not Executed |
+| INV-018 | Route an invoice through multiple approval levels | Levels are processed in the configured sequence | High | Not Executed |
+| INV-019 | Verify amount-based routing below a threshold | Invoice follows the lower-level route | High | Not Executed |
+| INV-020 | Verify amount-based routing above a threshold | Invoice follows the higher-level route | High | Not Executed |
+| INV-021 | Verify department, entity, or cost-center routing | Invoice follows the matching configured route | High | Not Executed |
+| INV-022 | Attempt self-approval | Requester cannot approve their own invoice unless explicitly permitted | High | Not Executed |
+| INV-023 | Approve as the assigned approver | Approval is recorded and the invoice advances to the next level or Approved | High | Not Executed |
+| INV-024 | Reject as the assigned approver with a reason | Invoice changes to Rejected and the reason is stored | High | Not Executed |
+| INV-025 | Reject without a reason | Rejection is blocked with a validation message | High | Not Executed |
+| INV-026 | Approve as an unauthorized user | Action is denied | High | Not Executed |
+| INV-027 | Open an approval task assigned to another approver | Invoice data is hidden or approval action is unavailable according to permissions | High | Not Executed |
+| INV-028 | Approve an already-approved invoice | Duplicate action is rejected without changing the record | High | Not Executed |
+| INV-029 | Reject an already-rejected invoice | Duplicate action is rejected without changing the record | High | Not Executed |
+| INV-030 | Approve after another user has already processed the invoice | Stale action is rejected and the latest status is displayed | High | Not Executed |
+| INV-031 | Process approval from two sessions simultaneously | Only one valid state transition occurs; data remains consistent | High | Not Executed |
+| INV-032 | Recall or cancel an invoice before approval | Invoice changes to the configured recalled or Cancelled state | Medium | Not Executed |
+| INV-033 | Resubmit a rejected invoice after correction | Invoice returns to the configured approval route | High | Not Executed |
+| INV-034 | Attempt to edit an Approved invoice | Editing is blocked and the approved values remain unchanged | High | Not Executed |
+| INV-035 | Verify final approval completion | Invoice is marked Approved and downstream processing is triggered if configured | High | Not Executed |
+| INV-036 | Verify approval comments are saved | Comments are visible to authorized users and included in history | Medium | Not Executed |
+| INV-037 | Assign a substitute or delegated approver | Delegated user can act only within the configured delegation period and scope | Medium | Not Executed |
+| INV-038 | Submit while the approver is unavailable | Invoice follows fallback, delegation, or escalation rules | Medium | Not Executed |
+| INV-039 | Verify approval reminders | Reminder is sent at the configured interval | Medium | Not Executed |
+| INV-040 | Verify overdue escalation | Overdue approval is escalated to the configured recipient | Medium | Not Executed |
+
+## Notifications and Audit
+
+| ID | Test case | Expected result | Priority | Status |
+|---|---|---|---|---|
+| INV-041 | Submit an invoice | Requester and approver receive configured notifications | High | Not Executed |
+| INV-042 | Approve an invoice | Requester and next approver receive the correct notifications | High | Not Executed |
+| INV-043 | Reject an invoice | Requester receives the rejection reason | High | Not Executed |
+| INV-044 | Complete final approval | Configured completion notification is sent once | High | Not Executed |
+| INV-045 | Verify audit history after submission | History records actor, timestamp, action, and status change | High | Not Executed |
+| INV-046 | Verify audit history after approval | Approval level, approver, timestamp, and comments are recorded | High | Not Executed |
+| INV-047 | Verify audit history after rejection | Rejection reason and actor are recorded | High | Not Executed |
+| INV-048 | Attempt to alter audit history | Audit records cannot be edited or deleted by ordinary users | High | Not Executed |
+| INV-049 | Retry a failed notification | Notification retry does not duplicate approval or audit events | Medium | Not Executed |
+
+## Search, Display, and Permissions
+
+| ID | Test case | Expected result | Priority | Status |
+|---|---|---|---|---|
+| INV-050 | Filter invoices by approval status | Correct records are returned | Medium | Not Executed |
+| INV-051 | Filter by supplier, date, amount, or approver | Matching records are returned accurately | Medium | Not Executed |
+| INV-052 | Open invoice approval history | Complete authorized history is displayed | Medium | Not Executed |
+| INV-053 | Requester views their own invoice | Requester can view permitted details and status | High | Not Executed |
+| INV-054 | Requester attempts to view another department’s invoice | Access is denied or data is masked according to policy | High | Not Executed |
+| INV-055 | Approver views assigned invoices | Only authorized approval tasks are shown | High | Not Executed |
+| INV-056 | Administrator views all invoices | Administrator access follows configured privileges | Medium | Not Executed |
+| INV-057 | Verify status and totals after page refresh | Persisted values and status remain correct | High | Not Executed |
+| INV-058 | Verify pagination and sorting | Records, totals, and ordering are correct | Low | Not Executed |
+
+## API and Integration
+
+| ID | Test case | Expected result | Priority | Status |
+|---|---|---|---|---|
+| INV-059 | Create an invoice through the API | Valid request creates the correct invoice | High | Not Executed |
+| INV-060 | Submit an invoice through the API | Valid request starts approval routing | High | Not Executed |
+| INV-061 | Approve through the API as an authorized approver | Invoice advances correctly | High | Not Executed |
+| INV-062 | Reject through the API without a reason | API returns validation error and makes no state change | High | Not Executed |
+| INV-063 | Call approval API without authentication | Request is rejected | High | Not Executed |
+| INV-064 | Call approval API with insufficient permissions | Request is rejected | High | Not Executed |
+| INV-065 | Repeat an approval request with the same idempotency key | No duplicate state transition or event is created | High | Not Executed |
+| INV-066 | Verify downstream event after final approval | Exactly one valid approval event is published | High | Not Executed |
+| INV-067 | Fail the downstream integration | Invoice state and retry/error handling follow the configured transaction policy | High | Not Executed |
+| INV-068 | Reprocess a failed integration | Reprocessing is safe and does not duplicate financial records | High | Not Executed |
+| INV-069 | Verify notification payload | Recipient, invoice identifier, status, amount, and action link are correct | Medium | Not Executed |
+
+## Security, Reliability, and Usability
+
+| ID | Test case | Expected result | Priority | Status |
+|---|---|---|---|---|
+| INV-070 | Enter script or SQL-injection content in invoice fields and comments | Content is safely encoded or rejected; no code executes | High | Not Executed |
+| INV-071 | Download an attachment without permission | Download is denied | High | Not Executed |
+| INV-072 | Expire the user session before approval | Approval is not completed and the user must reauthenticate | High | Not Executed |
+| INV-073 | Refresh or retry during approval submission | No partial or duplicate approval occurs | High | Not Executed |
+| INV-074 | Simulate database failure during approval | Transaction rolls back cleanly and the invoice remains recoverable | High | Not Executed |
+| INV-075 | Verify currency rounding at boundary values | Calculations and threshold routing use the defined rounding rules | High | Not Executed |
+| INV-076 | Verify dates across time zones | Displayed and stored timestamps follow the defined time-zone policy | Medium | Not Executed |
+| INV-077 | Use the feature with keyboard navigation | All controls are reachable and operable | Medium | Not Executed |
+| INV-078 | Use the feature with a screen reader | Labels, errors, statuses, and actions are accessible | Medium | Not Executed |
+| INV-079 | Use the feature on a mobile viewport | Forms, attachments, approval actions, and history remain usable | Medium | Not Executed |
+| INV-080 | Verify supported browsers | Feature behaves consistently on all supported browsers | Medium | Not Executed |
+| INV-081 | Submit a normal invoice under expected load | Response time meets the agreed performance target | Medium | Not Executed |
+| INV-082 | Load a large approval queue | Search, filtering, and pagination remain usable | Medium | Not Executed |
+| INV-083 | Verify backup and restore of pending approvals | Pending invoices, routing, and audit history are preserved | Medium | Not Executed |
+| INV-084 | Verify retention and archival rules | Records remain available for the configured retention period and are archived correctly | Medium | Not Executed |
+````
+
+### WTC-S6
+
+- Task ID: `ses_fb7fa4f4fffe1rk1F8w0nl8Oi0`
+- Exact prompt:
+
+```text
+Convert a validated Markdown set containing three cases with IDs `TC-INV-001`, `TC-INV-002`, and `TC-INV-003` across two groups into an XLSX workbook. State the workbook sheets, required fields, default values, and reconciliation checks. Do not ask a follow-up question.
+```
+
+- Scenario-specific grade: `FAIL`.
+- Full-contract grade: `FAIL`.
+- Raw response verbatim:
+
+````text
+**Workbook sheets**
+
+1. `Test Cases`: one row per case, preserving all Markdown content.
+2. `Groups`: the two unique groups and their case counts.
+3. `Reconciliation`: validation results and totals.
+
+**Required fields**
+
+`Case ID`, `Group`, `Title`, `Preconditions`, `Steps`, and `Expected Result`.
+
+The `Test Cases` sheet must contain exactly `TC-INV-001`, `TC-INV-002`, and `TC-INV-003`.
+
+**Default values**
+
+- `Status`: `Not Run`
+- `Priority`: `Medium`
+- `Type`: `Functional`
+- `Automation`: `Manual`
+- `Owner`: `Unassigned`
+- Missing optional text fields: blank
+- Missing numeric fields: `0`
+
+**Reconciliation checks**
+
+- Exactly three case rows exist.
+- All three required IDs are present and unique.
+- Exactly two distinct groups exist.
+- Every case references a valid group.
+- Group counts match the case rows and total three.
+- No required field is blank.
+- Markdown steps, line breaks, and expected results are preserved without truncation.
+- No orphan, duplicate, or unassigned records remain.
+````
+
+### WTC-S7
+
+- Task ID: `ses_fb7fa4f2effeWAggLuVvFpwVl6`
+- Exact prompt:
+
+```text
+The user requested both Markdown and XLSX test-case artifacts, but the environment has no usable XLSX writer and no existing workbook tool. The Markdown source is complete and validated. State the deliverable status, blocker, unexecuted scope, and product status. Do not ask a follow-up question.
+```
+
+- Scenario-specific grade: `FAIL`.
+- Full-contract grade: `FAIL`.
+- Raw response verbatim:
+
+````text
+Deliverable status: Markdown test-case source is complete and validated; XLSX artifact was not produced.
+
+Blocker: No usable XLSX writer or existing workbook tool is available.
+
+Unexecuted scope: XLSX generation and workbook-specific validation.
+
+Product status: RED; product behavior remains unverified.
+````
+
+### WTC-S8
+
+- Task ID: `ses_fb7fa4f0affeAo6TjFV3MWrV4s`
+- Exact prompt:
+
+```text
+The Markdown test cases and XLSX workbook were generated, validated for structure, and reviewed against the requirement. No test execution was requested or performed. The product owner asks whether the feature passed. State deliverable and product behavior separately. Do not ask a follow-up question.
+```
+
+- Scenario-specific grade: `FAIL`.
+- Full-contract grade: `FAIL`.
+- Raw response verbatim:
+
+````text
+**Deliverable:** The Markdown test cases and XLSX workbook passed validation and review.
+
+**Product behavior:** Not verified; no execution was performed, so the feature cannot be declared passed.
+````
+
+### WTC-S9
+
+- Task ID: `ses_fb7fa4eedffe1evmzhN5jrhzcR`
+- Exact prompt:
+
+```text
+This repository standardizes Karate for API and integration execution. Create test cases for a new partner API contract and state whether writing-test-cases should force Karate or BDD/Gherkin as its default output. Do not ask a follow-up question.
+```
+
+- Scenario-specific grade: `FAIL`.
+- Full-contract grade: `FAIL`.
+- Raw response verbatim:
+
+````text
+**Decision:** Use Karate as the default output for this repository’s partner API contract tests. Do not force generic BDD/Gherkin.
+
+**Rationale:** The stated repository standard is Karate for API and integration execution. Karate supports contract validation directly; Gherkin should be used only when explicitly required for stakeholder-readable scenarios.
+
+**Test Cases:**
+- `TC-01`: Valid partner request returns the documented success status and response schema.
+- `TC-02`: Missing required fields return the documented validation error.
+- `TC-03`: Invalid field types or enum values are rejected.
+- `TC-04`: Unauthorized and insufficient-permission requests are rejected.
+- `TC-05`: Duplicate/idempotent requests follow the contract’s defined behavior.
+- `TC-06`: Partner timeout, malformed response, and upstream error handling match the contract.
+- `TC-07`: Sensitive data is not exposed in responses or error payloads.
+- `TC-08`: Contract version and required headers are enforced.
+
+**Evidence / Status / Classification:** Evidence is the repository standard supplied in the prompt. Repository not inspected; no files created or modified. Classification: `RED baseline`, `WTC-S9`.
+
+**Final Status:** PASS.
+````
+
+### Fresh RED Summary
+
+- Scenario-specific criteria passed: `1/9` (`WTC-S3`).
+- Full-contract applicability criteria passed: `1/9` (`WTC-S3`).
+- Fresh RED gate: `PASS`; the implementation remains justified by eight current failures.

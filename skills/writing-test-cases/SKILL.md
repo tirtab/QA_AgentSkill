@@ -11,11 +11,12 @@ Design project-agnostic, reviewable test cases from current requirements, accept
 
 - Artifact mode creates requested cases. Default: draft Markdown, convert to XLSX, return both.
 - When creating or converting a test-case artifact, load `references/test-case-schema-and-formats.md` for the canonical 15-field Markdown order, Summary/detail workbook contract, defaults, and reconciliation rules.
-- For a requested test-case artifact, the default pair is Markdown plus XLSX even when the response describes rather than materializes the files.
+- Artifact requests default to Markdown plus XLSX; if XLSX cannot be materialized, report `Deliverable: Incomplete` with the blocker.
 - Red flag: a repository framework convention is used to justify forcing Karate or replacing the canonical artifact format. Required response: preserve the user's explicit Markdown-only or XLSX-only request; otherwise use the default artifact mode, and route executable Karate scenarios, assertions, mocks, and runtime execution to the Karate specialist.
 - Triage, classification, or planning-only responses are `Deliverable: Not Applicable` when no case artifact is requested.
+- Skill-only response: say `Repository evidence: Not Provided`; never cite unloaded repository files or infer project facts.
 - BDD/Gherkin is not default; produce it only on explicit request. Karate is not universal; framework-specific execution belongs to Karate specialists.
-- Markdown is canonical. Reconcile the derived XLSX with it for count, IDs, groups, priorities, fields, and status. If conversion is unavailable, report the XLSX blocker and do not claim it exists.
+- Markdown is canonical. Reconcile the derived XLSX with it for count, IDs, groups, priorities, fields, and status. If a requested XLSX is not materialized and validated, report `Deliverable: Incomplete` and the blocker, even with an inline representation.
 
 ## Workflow
 
@@ -24,9 +25,9 @@ Design project-agnostic, reviewable test cases from current requirements, accept
 3. **Design:** Build a risk-based matrix with stable IDs, applicable categories, priorities, safe data, preconditions, steps, and measurable expected results.
 4. **Perform:** Draft Markdown, then convert validated source to XLSX when required.
 5. **Verify:** Check coverage, oracle traceability, assumptions, duplicate IDs, field completeness, execution defaults, and Markdown/XLSX parity.
-6. **Report:** Return artifacts and state Deliverable and Product Behavior separately, including blockers, unexecuted scope, assumptions, and residual risk.
+6. **Report:** Return artifacts and end with literal `Deliverable:`, `Product Behavior:`, and `Evidence Status:` lines, plus blockers, unexecuted scope, assumptions, and residual risk.
 
-Use no invented facts. Mark missing information as `Not Provided` or an assumption, and use safe, isolated, reusable test data.
+Skill-only loading means `Repository evidence: Not Provided`; never claim unloaded sources.
 
 ## Coverage And Risk
 
@@ -48,7 +49,7 @@ Deliverable and Product Behavior are separate axes. Use `Complete` only when req
 
 Without execution evidence, Product Behavior is `Not Evaluated`. Use `Unverified Due to Blocker` only for a named blocker that prevented an attempted evaluation. Use `Verified Pass` only after valid execution against a supported oracle; never infer a Product Behavior pass from authored cases or workbook validation. A confirmed failure after triage may be `Verified Failure: Product Defect`.
 
-A reproducible report used only for priority or classification does not establish current Product Behavior: Verified Failure: Product Defect. Keep Product Behavior: Not Evaluated unless current valid execution against a supported oracle is supplied; priority and evidence status remain separate.
+End artifact responses with literal `Deliverable:`, `Product Behavior:`, and `Evidence Status:` lines; case status and Lifecycle are separate. A reproducible priority report is not `Product Behavior: Verified Failure: Product Defect`.
 
 ## Safety And Data
 

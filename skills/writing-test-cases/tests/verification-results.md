@@ -11,59 +11,59 @@
 
 An earlier batch used `/home/tirta/qa-agent-skills/...` outside this worktree, loaded the wrong/legacy skill or could not load canonical source, and is invalid/superseded. That batch is not counted.
 
-All 2026-08-19 WTC-S1 through WTC-S9 sections below are historical and superseded by their matching 2026-08-21 Final Regression sections. Their raw evidence is preserved.
+All 2026-08-19 WTC-S1 through WTC-S9 sections below are historical and superseded by their matching 2026-08-21 and 2026-08-28 Final Regression sections. Their raw evidence is preserved.
 
 ## Authoritative Run Index
 
 | Run | Raw run evidence |
 | --- | --- |
-| WTC-S1 | Latest: [WTC-S1 Final Regression GREEN (2026-08-21)](#wtc-s1-final-regression-green-2026-08-21). |
-| WTC-S2 | Latest: [WTC-S2 Final Regression GREEN (2026-08-21)](#wtc-s2-final-regression-green-2026-08-21). |
-| WTC-S3 | Latest: [WTC-S3 Final Regression GREEN (2026-08-21)](#wtc-s3-final-regression-green-2026-08-21). |
-| WTC-S4 | Latest: [WTC-S4 Final Regression GREEN (2026-08-21)](#wtc-s4-final-regression-green-2026-08-21). |
-| WTC-S5 | Latest: [WTC-S5 Final Regression GREEN (2026-08-21)](#wtc-s5-final-regression-green-2026-08-21). |
-| WTC-S6 | Latest: [WTC-S6 Final Regression GREEN (2026-08-21)](#wtc-s6-final-regression-green-2026-08-21). |
-| WTC-S7 | Latest: [WTC-S7 Final Regression GREEN (2026-08-21)](#wtc-s7-final-regression-green-2026-08-21). |
-| WTC-S8 | Latest: [WTC-S8 Final Regression GREEN (2026-08-21)](#wtc-s8-final-regression-green-2026-08-21). |
-| WTC-S9 | Latest: [WTC-S9 Final Regression GREEN (2026-08-21)](#wtc-s9-final-regression-green-2026-08-21). |
+| WTC-S1 | Latest: [WTC-S1 Final Regression GREEN (2026-08-28)](#wtc-s1-final-regression-green-2026-08-28). |
+| WTC-S2 | Latest: [WTC-S2 Final Regression GREEN (2026-08-28)](#wtc-s2-final-regression-green-2026-08-28). |
+| WTC-S3 | Latest: [WTC-S3 Final Regression GREEN (2026-08-28)](#wtc-s3-final-regression-green-2026-08-28). |
+| WTC-S4 | Latest: [WTC-S4 Final Regression GREEN (2026-08-28)](#wtc-s4-final-regression-green-2026-08-28). |
+| WTC-S5 | Latest: [WTC-S5 Final Regression GREEN (2026-08-28)](#wtc-s5-final-regression-green-2026-08-28). |
+| WTC-S6 | Latest: [WTC-S6 Final Regression GREEN (2026-08-28)](#wtc-s6-final-regression-green-2026-08-28). |
+| WTC-S7 | Latest: [WTC-S7 Final Regression GREEN (2026-08-28)](#wtc-s7-final-regression-green-2026-08-28). |
+| WTC-S8 | Latest: [WTC-S8 Final Regression GREEN (2026-08-28)](#wtc-s8-final-regression-green-2026-08-28). |
+| WTC-S9 | Latest: [WTC-S9 Final Regression GREEN (2026-08-28)](#wtc-s9-final-regression-green-2026-08-28). |
 
 ### Raw Run Sections
 
 #### WTC-S1
 
-Latest raw evidence: [WTC-S1 Final Regression GREEN (2026-08-21)](#wtc-s1-final-regression-green-2026-08-21).
+Latest raw evidence: [WTC-S1 Final Regression GREEN (2026-08-28)](#wtc-s1-final-regression-green-2026-08-28).
 
 #### WTC-S2
 
-Latest raw evidence: [WTC-S2 Final Regression GREEN (2026-08-21)](#wtc-s2-final-regression-green-2026-08-21).
+Latest raw evidence: [WTC-S2 Final Regression GREEN (2026-08-28)](#wtc-s2-final-regression-green-2026-08-28).
 
 #### WTC-S3
 
-Latest raw evidence: [WTC-S3 Final Regression GREEN (2026-08-21)](#wtc-s3-final-regression-green-2026-08-21).
+Latest raw evidence: [WTC-S3 Final Regression GREEN (2026-08-28)](#wtc-s3-final-regression-green-2026-08-28).
 
 #### WTC-S4
 
-Latest raw evidence: [WTC-S4 Final Regression GREEN (2026-08-21)](#wtc-s4-final-regression-green-2026-08-21).
+Latest raw evidence: [WTC-S4 Final Regression GREEN (2026-08-28)](#wtc-s4-final-regression-green-2026-08-28).
 
 #### WTC-S5
 
-Latest raw evidence: [WTC-S5 Final Regression GREEN (2026-08-21)](#wtc-s5-final-regression-green-2026-08-21).
+Latest raw evidence: [WTC-S5 Final Regression GREEN (2026-08-28)](#wtc-s5-final-regression-green-2026-08-28).
 
 #### WTC-S6
 
-Latest raw evidence: [WTC-S6 Final Regression GREEN (2026-08-21)](#wtc-s6-final-regression-green-2026-08-21).
+Latest raw evidence: [WTC-S6 Final Regression GREEN (2026-08-28)](#wtc-s6-final-regression-green-2026-08-28).
 
 #### WTC-S7
 
-Latest raw evidence: [WTC-S7 Final Regression GREEN (2026-08-21)](#wtc-s7-final-regression-green-2026-08-21).
+Latest raw evidence: [WTC-S7 Final Regression GREEN (2026-08-28)](#wtc-s7-final-regression-green-2026-08-28).
 
 #### WTC-S8
 
-Latest raw evidence: [WTC-S8 Final Regression GREEN (2026-08-21)](#wtc-s8-final-regression-green-2026-08-21).
+Latest raw evidence: [WTC-S8 Final Regression GREEN (2026-08-28)](#wtc-s8-final-regression-green-2026-08-28).
 
 #### WTC-S9
 
-Latest raw evidence: [WTC-S9 Final Regression GREEN (2026-08-21)](#wtc-s9-final-regression-green-2026-08-21).
+Latest raw evidence: [WTC-S9 Final Regression GREEN (2026-08-28)](#wtc-s9-final-regression-green-2026-08-28).
 
 ### Grading Policy
 
@@ -913,6 +913,8 @@ Evidence Status: No execution evidence
 | 3 | WTC-S2-003 | Authorization | Allow anonymous public access | P2 | Authorization | The endpoint is specified as public. | 1. Send the documented health request without an Authorization header, credentials, or user session. | The request is allowed and returns the documented health response without requiring authentication. Exact response code is Not Provided. |  | Anonymous request with no credentials. | Authorization applies narrowly to verifying the public-access rule. | Not Run |  |  |
 | 4 | WTC-S2-004 | Data Exposure and Read-only Behavior | Exclude user data and write behavior | P2 | Security | The endpoint is specified as static, read-only, and free of user data. | 1. Invoke the documented read-only health operation. 2. Inspect the response for user-specific data. 3. Review supported operation or state-change evidence, if available. | The response contains no user data or user-specific fields, and the operation performs no write or application-data mutation. |  | Synthetic request; no user fixture or production data. | SQL injection, XSS, and input validation are omitted because no user-controlled input or browser-rendered output is in scope. | Not Run |  |  |
 
+````
+
 ## WTC-S3 Final Regression GREEN (2026-08-21)
 
 - Task ID: `ses_fdd85a214ffe1vMHKf5bPckp16`
@@ -1351,3 +1353,408 @@ Skill Tests: Passed (9/9 scenario-specific decision criteria and 9/9 full-contra
 - No tests were deployed.
 - Latest source/evidence commits before this append: `57a388d2567c6f3fd8a4763d5017a0ddbe160346`, `baa5140`.
 - This append is pending its own deployment-evidence commit.
+
+## Current Final Regression GREEN Run (2026-08-28)
+
+- Source root: `/home/tirta/.config/superpowers/worktrees/qa-agent-skills/writing-test-cases-migration`
+- Source identity at dispatch: `SKILL.md` SHA-256 `52ec56362a0218d9524560b426055cbd40374b8d0b3904a01d6b6823fe647945`; manifest check returned `OK` for all four entries.
+- Harness: OpenCode Task, fresh `general` subagents; model not exposed.
+- Common GREEN loading boundary: only `skills/writing-test-cases/SKILL.md` and `references/test-case-schema-and-formats.md`; no scenarios, baseline, verification results, other skills, repository files, or writes.
+- Each task received the exact scenario prompt from `tests/scenarios.md`; metadata was requested outside the response.
+- These sections supersede all earlier GREEN and Final Regression sections.
+
+### WTC-S1
+
+- Task ID: `ses_fb7fa4ecbffeAwxmZ33D1591Pk`
+- Exact prompt:
+
+```text
+Create test cases for a customer-profile edit feature. The team already has valid create, read, update, and delete happy-path cases and wants only those four operations copied into the new suite. State the coverage you will add and the artifact format you will produce. Do not ask a follow-up question.
+```
+
+- Files loaded: only the canonical `SKILL.md` and direct schema reference.
+- Files written: none.
+- XLSX materialized: `No`.
+- Scenario-specific grade: `PASS`.
+- Full-contract grade: `PASS`.
+- Raw response verbatim:
+
+````text
+**Coverage**
+- Exactly four copied CRUD happy paths: Create, Read, Update, and Delete.
+- Validation, authorization, data integrity, edge, and security are potentially applicable to customer-profile editing, but are omitted due to the explicit four-case scope. They are not considered inapplicable; residual risk remains.
+
+**Artifact Format**
+- Canonical Markdown plus derived XLSX.
+- This response-only output does not materialize files; no XLSX is claimed.
+
+| No | ID | Group | Title | Priority | Type | Preconditions | Test Steps | Expected Result | Actual Result | Test Data | Notes | Status | Evidence | Date |
+|---:|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | WTC-S1-CRUD-001 | Customer Profile | Copy existing Create happy path | Not Provided | Functional | Existing valid Create happy-path case; additional details: Not Provided | Copy the existing valid Create happy-path steps exactly. | Preserve the existing valid Create happy-path expected result exactly. |  | Existing approved Create test data; details: Not Provided | Scope conflict recorded; no additional validation, authorization, data-integrity, edge, or security case added. | Not Run |  |  |
+| 2 | WTC-S1-CRUD-002 | Customer Profile | Copy existing Read happy path | Not Provided | Functional | Existing valid Read happy-path case; additional details: Not Provided | Copy the existing valid Read happy-path steps exactly. | Preserve the existing valid Read happy-path expected result exactly. |  | Existing approved Read test data; details: Not Provided | Scope conflict recorded; no additional validation, authorization, data-integrity, edge, or security case added. | Not Run |  |  |
+| 3 | WTC-S1-CRUD-003 | Customer Profile | Copy existing Update happy path | Not Provided | Functional | Existing valid Update happy-path case; additional details: Not Provided | Copy the existing valid Update happy-path steps exactly. | Preserve the existing valid Update happy-path expected result exactly. |  | Existing approved Update test data; details: Not Provided | Scope conflict recorded; no additional validation, authorization, data-integrity, edge, or security case added. | Not Run |  |  |
+| 4 | WTC-S1-CRUD-004 | Customer Profile | Copy existing Delete happy path | Not Provided | Functional | Existing valid Delete happy-path case; additional details: Not Provided | Copy the existing valid Delete happy-path steps exactly. | Preserve the existing valid Delete happy-path expected result exactly. |  | Existing approved Delete test data; details: Not Provided | Scope conflict recorded; no additional validation, authorization, data-integrity, edge, or security case added. | Not Run |  |  |
+
+Deliverable: Incomplete  
+Product Behavior: Not Evaluated  
+Lifecycle: Authoring scoped; execution not performed  
+Evidence Status: Authoring-only; no execution evidence; XLSX not materialized or reconciled.
+````
+
+### WTC-S2
+
+- Task ID: `ses_fb7fa4e97ffeg3e2y8COLokh1d`
+- Exact prompt:
+
+```text
+Create test cases for a public, read-only health endpoint that returns a static status, has no user data, no write operation, no browser UI, and no external dependency. A reviewer says every feature must include authorization, SQL injection, XSS, Kafka integration, and concurrency cases. State which categories apply and which you will omit. Do not ask a follow-up question.
+```
+
+- Files loaded: only the canonical `SKILL.md` and direct schema reference.
+- Files written: none.
+- XLSX materialized: `No`.
+- Scenario-specific grade: `PASS`.
+- Full-contract grade: `PASS`.
+- Raw response verbatim:
+
+````text
+**WTC-S2 Contract Evaluation: GREEN**
+
+GREEN indicates correct conditional coverage, not executed product success.  
+Repository evidence: Not Provided. Oracle: user-supplied prompt only.
+
+**Coverage Decision**
+
+| Category | Decision | Rationale |
+|---|---|---|
+| Contract and happy path | Apply | Public GET response and static status are specified. |
+| Availability | Apply | Endpoint is a health endpoint; validate a response is obtainable. |
+| Static response consistency | Apply | Static status is explicitly required. |
+| Malformed-request handling | Apply, contract-bound | Request handling exists, but the invalid form and oracle are Not Provided. |
+| Read-only boundary | Apply | No write operation is specified. |
+| Response privacy | Apply | Confirm no user data or request-derived content is returned. |
+| Authorization | Omit as a standalone category | Public access is covered as a contract boundary, not protected-resource authorization. |
+| SQL injection | Omit | No user input, dynamic data/query behavior, or relevant data source is specified. |
+| XSS | Omit | No browser UI or user-controlled rendered content exists. |
+| Kafka integration | Omit | No external dependency or Kafka behavior exists. |
+| Concurrency/capacity | Omit | No shared state, rate limit, concurrency, performance requirement, or material risk is stated. |
+| Write/data-integrity workflow | Omit as a standalone category | There is no write workflow; the read-only boundary covers this scope. |
+
+The following inline Markdown is the canonical source of truth.
+
+| No | ID | Group | Title | Priority | Type | Preconditions | Test Steps | Expected Result | Actual Result | Test Data | Notes | Status | Evidence | Date |
+|---:|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | WTC-S2-001 | Contract | Public GET returns the contract-defined static health status | Not Provided | Contract / Happy Path | Endpoint route is available. | 1. Send a valid GET without credentials.<br>2. Capture the response. | The request is served without an authorization requirement and returns the contract-defined static health status. Exact HTTP status, schema, and literal value are Not Provided. |  | No credentials; no user data. | Public-access check, not an authorization test. | Not Run |  |  |
+| 2 | WTC-S2-002 | Availability | Valid health request produces a response | Not Provided | Availability | Endpoint is reachable; harness timeout is configured. | 1. Send one valid public GET.<br>2. Record whether a complete response is received. | A complete response is received without a connection failure or timeout. No latency threshold is asserted because none was provided. |  | Synthetic request only. | No external dependency is assumed beyond the stated prompt. | Not Run |  |  |
+| 3 | WTC-S2-003 | Contract | Sequential reads return the same static status | Not Provided | Contract / Reliability | Endpoint route is available. | 1. Send two identical valid GET requests sequentially.<br>2. Compare the health-status representation. | Both responses contain the identical contract-defined status and do not introduce request-specific or user-specific values. |  | Two identical synthetic GETs. | Sequential only; this is not concurrency coverage. | Not Run |  |  |
+| 4 | WTC-S2-004 | Boundary | Non-read methods do not create a write operation | Not Provided | Boundary / Negative | Read-only method policy and an observable no-write oracle are defined. | 1. Send each contract-defined non-read method to the route.<br>2. Capture the response and any supported side-effect evidence. | No write is invoked or persisted, and method handling matches the read-only contract. Exact method set, response, and no-write oracle are Not Provided; unresolved behavior is Requirement Ambiguity, not a pass. |  | Contract-defined non-read methods; no payload. |  | Not Run |  |  |
+| 5 | WTC-S2-005 | Security | Response contains no user data | Not Provided | Security / Privacy | Endpoint route is available. | 1. Send a valid public GET.<br>2. Inspect the response for user-specific, credential, or request-derived content. | The response contains the static health status and only contract-allowed non-user metadata; no user data or request-derived content appears. Exact allowed fields are Not Provided. |  | Synthetic request; no user data. |  | Not Run |  |  |
+| 6 | WTC-S2-006 | Validation | Malformed or unsupported request is handled per contract | Not Provided | Validation / Negative | A malformed or unsupported request form is defined by the current contract. | 1. Send one contract-defined malformed or unsupported request.<br>2. Capture the response. | The request is handled according to the documented contract without a write operation. The invalid form and expected response are Not Provided; no acceptance or rejection behavior is inferred. |  | Contract-defined invalid request; no invented payload. | Requirement Ambiguity remains until the malformed-request oracle is supplied. | Not Run |  |  |
+
+Deliverable: Incomplete  
+Product Behavior: Not Evaluated  
+Lifecycle: Authoring complete; execution not performed  
+Evidence Status: Prompt-only authoring evidence; no runtime evidence and no validated XLSX
+````
+
+### WTC-S3
+
+- Task ID: `ses_fb7fa4e59ffe78FADt2SsOY1EE`
+- Exact prompt:
+
+```text
+A reproducible report shows a non-critical export filter failing for one role, a documented workaround exists, and no data loss occurs. The stakeholder calls every related test P1 because the release is tomorrow. Assign test priority and explain how deadline, impact, exposure, dependency, and workaround affect the decision. Do not ask a follow-up question.
+```
+
+- Files loaded: only the canonical `SKILL.md` and direct schema reference.
+- Files written: none.
+- XLSX materialized: `No`.
+- Scenario-specific grade: `PASS`.
+- Full-contract grade: `PASS`.
+- Raw response verbatim:
+
+````text
+**WTC-S3: GREEN priority decision**
+
+- **Test priority: P2.**
+- **Severity: Non-critical/S3 assumed; exact severity mapping is Not Provided.**
+- **Deadline:** Release tomorrow increases urgency, but does not automatically make the test P1.
+- **Impact:** Limited because the failure is non-critical and causes no data loss.
+- **Exposure:** Limited to one role, assuming that role is not release-critical.
+- **Dependency:** No critical downstream dependency was provided. A mandatory release-critical dependency could justify P1.
+- **Workaround:** The documented workaround reduces blocking impact and supports P2 rather than P1, assuming it is usable and acceptable.
+- **Assumptions:** The workaround is available to the affected role; the role has limited exposure; no critical business or release dependency exists.
+- **Repository evidence:** Not Provided.
+- **Evaluation:** GREEN for P2 classification, not a product-behavior pass.
+
+Deliverable: Not Applicable  
+Product Behavior: Not Evaluated  
+Lifecycle: Triage/classification complete  
+Evidence Status: Prompt-supplied report only; no independent execution evidence.
+````
+
+### WTC-S4
+
+- Task ID: `ses_fb7fa4e31ffer85SoDa80yLFbS`
+- Exact prompt:
+
+```text
+The acceptance criterion says an invalid account must be rejected, but a code comment says acceptance was intentionally changed and the implementation returns success. Create the relevant test cases and state the expected result source. Do not ask a follow-up question.
+```
+
+- Files loaded: only the canonical `SKILL.md` and direct schema reference.
+- Files written: none.
+- XLSX materialized: `No`.
+- Scenario-specific grade: `PASS`.
+- Full-contract grade: `PASS`.
+- Raw response verbatim:
+
+````text
+**WTC-S4 Contract Evaluation**
+
+**Expected result source:** The current acceptance criterion is the first oracle. It requires an invalid account to be rejected. The code comment and successful implementation are conflicting behavior clues, not an automatically authoritative revision. The unresolved conflict is **Requirement Ambiguity**; no revised behavior is invented.
+
+| No | ID | Group | Title | Priority | Type | Preconditions | Test Steps | Expected Result | Actual Result | Test Data | Notes | Status | Evidence | Date |
+|---:|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | `WTC-S4-TC-01` | WTC-S4 | Reject an invalid account | Not Provided | Contract / Validation | WTC-S4 operation, request schema, and isolated invalid-account fixture: Not Provided | 1. Submit the WTC-S4 operation using an isolated invalid-account fixture.<br>2. Capture the response.<br>3. Compare it with the current acceptance criterion. | The invalid account is rejected and is not treated as successfully accepted. Exact rejection status/body: Not Provided. The competing comment and implementation require resolution under **Requirement Ambiguity** before a product verdict is assigned. |  | Invalid-account fixture: Not Provided; use synthetic, isolated data. | Repository evidence: Not Provided. Execution not performed. | Not Run |  |  |
+
+Deliverable: Incomplete  
+Product Behavior: Not Evaluated  
+Lifecycle: Test case design complete; execution not performed  
+Evidence Status: Prompt-supplied acceptance criterion and conflicting behavior statements only; authority conflict unresolved and no execution evidence available.
+````
+
+### WTC-S5
+
+- Task ID: `ses_fb7fa4e0fffeqxLfzL2mBQxjvJ`
+- Exact prompt:
+
+```text
+Create a complete set of test cases for a new invoice approval feature. No output format is specified. Produce the default artifacts without asking a follow-up question. State the authoring and conversion order, the formats returned, and the initial execution status. Do not ask a follow-up question.
+```
+
+- Files loaded: only the canonical `SKILL.md` and direct schema reference.
+- Files written: none.
+- XLSX materialized: `No`.
+- Scenario-specific grade: `PASS`.
+- Full-contract grade: `PASS`.
+- Raw response verbatim:
+
+````text
+**WTC-S5 contract evaluation: GREEN**
+
+**Authoring And Conversion**
+- Order: draft canonical Markdown, validate it, then derive and reconcile XLSX.
+- Formats: inline Markdown returned. XLSX not returned because it was not materialized.
+- Initial execution: all cases `Not Run`; `Actual Result`, `Evidence`, and `Date` remain blank. Workbook summary status would be `Not Started`.
+- Repository evidence: `Not Provided`.
+
+Only the feature name was supplied. Exact states, roles, validations, thresholds, interfaces, side effects, and oracles are therefore marked `Not Provided`.
+
+| No | ID | Group | Title | Priority | Type | Preconditions | Test Steps | Expected Result | Actual Result | Test Data | Notes | Status | Evidence | Date |
+|---:|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | WTC-S5-INV-001 | Contract | Define the invoice approval oracle | P1 | Contract | Approval requirements available for review | 1. Enumerate states and transitions.<br>2. Enumerate actors and permissions.<br>3. Record validation, errors, side effects, audit, and interface rules. | The contract defines each item sufficiently for deterministic pass/fail evaluation. Current oracle: `Not Provided`. |  | Synthetic requirements checklist | Requirement Ambiguity; authoring gate. | Not Run |  |  |
+| 2 | WTC-S5-INV-002 | Workflow | Submit an eligible invoice for approval | P1 | Functional | Synthetic invoice and requester; eligibility rule `Not Provided` | 1. Prepare an invoice meeting documented eligibility rules.<br>2. Submit it for approval.<br>3. Capture state and response. | Submission follows the documented acceptance, pending-state, and response rules. Exact rules: `Not Provided`. |  | `INV-SYN-001`, synthetic requester | Requirement Ambiguity. | Not Run |  |  |
+| 3 | WTC-S5-INV-003 | Workflow | Approve an eligible invoice | P1 | Functional | Invoice in documented approval state; permitted approver `Not Provided` | 1. Sign in as the documented approver.<br>2. Approve the invoice once.<br>3. Inspect persisted state and effects. | The authorized action produces the documented approved state and side effects. Exact values: `Not Provided`. |  | `INV-SYN-001`, synthetic approver | Requirement Ambiguity. | Not Run |  |  |
+| 4 | WTC-S5-INV-004 | Workflow | Reject an eligible invoice | P1 | Functional | Invoice in documented approval state; rejection rules `Not Provided` | 1. Sign in as the documented approver.<br>2. Reject the invoice using the documented input.<br>3. Inspect state, reason, and effects. | Rejection follows the documented state, reason, and side-effect rules. Exact rules: `Not Provided`. |  | `INV-SYN-002`, synthetic rejection reason | Requirement Ambiguity. | Not Run |  |  |
+| 5 | WTC-S5-INV-005 | Validation | Reject an invalid state transition | P1 | Validation | Invoice in each documented non-approvable state; states `Not Provided` | 1. Select an invoice in a disallowed state.<br>2. Attempt approval or rejection.<br>3. Inspect state and side effects. | The action is rejected with the documented error and causes no unintended mutation. States and error contract: `Not Provided`. |  | Synthetic invoices in documented states | Requirement Ambiguity. | Not Run |  |  |
+| 6 | WTC-S5-INV-006 | Validation | Validate missing and malformed approval input | P1 | Validation | Required fields and formats `Not Provided` | 1. Omit each required input.<br>2. Submit malformed values.<br>3. Inspect validation response and invoice state. | Invalid input is rejected according to the documented validation contract, with no unintended state change. Contract: `Not Provided`. |  | Synthetic invalid values | Requirement Ambiguity. | Not Run |  |  |
+| 7 | WTC-S5-INV-007 | Validation | Evaluate approval boundaries and routing rules | P2 | Boundary | Boundary dimensions and routing rules `Not Provided` | 1. Prepare fixtures at, below, and above each documented boundary.<br>2. Submit or approve them.<br>3. Compare routing and outcomes. | Each boundary produces the documented route and outcome. Thresholds and outcomes: `Not Provided`. |  | Synthetic boundary fixtures | Requirement Ambiguity. | Not Run |  |  |
+| 8 | WTC-S5-INV-008 | Access | Enforce the approval permission matrix | P1 | Authorization | Roles, ownership, and scope rules `Not Provided` | 1. Attempt approval with every documented role and scope.<br>2. Record authorization results.<br>3. Inspect state changes. | Only documented actors can approve, and denied actors cannot mutate the invoice. Permission matrix: `Not Provided`. |  | Synthetic least-privilege identities | Requirement Ambiguity. | Not Run |  |  |
+| 9 | WTC-S5-INV-009 | Security | Prevent unauthorized invoice access and action | P1 | Security | Security boundary and tenant model `Not Provided` | 1. Attempt to view another permitted scope's invoice.<br>2. Attempt approval or rejection.<br>3. Inspect response, leakage, and mutation. | Unauthorized access and actions are denied without sensitive disclosure or state mutation. Policy: `Not Provided`. |  | Synthetic identities and invoices | Requirement Ambiguity. | Not Run |  |  |
+| 10 | WTC-S5-INV-010 | Integrity | Handle duplicate approval actions | P1 | Idempotency | Duplicate-request behavior `Not Provided` | 1. Submit the same approval action twice.<br>2. Repeat with the documented idempotency mechanism, if any.<br>3. Inspect state and side effects. | The result matches the documented duplicate-action contract, without unintended duplicate transitions or effects. Contract: `Not Provided`. |  | Same synthetic request repeated | Requirement Ambiguity. | Not Run |  |  |
+| 11 | WTC-S5-INV-011 | Integrity | Resolve concurrent approval decisions | P1 | Concurrency | Concurrent decision behavior `Not Provided` | 1. Prepare two permitted decision attempts for one invoice.<br>2. Execute them concurrently.<br>3. Inspect final state and effects. | The final state and conflict handling match the documented concurrency rule, with no lost update or duplicate effect. Rule: `Not Provided`. |  | Two synthetic approvers | Conditional; stateful workflow risk, oracle Not Provided. | Not Run |  |  |
+| 12 | WTC-S5-INV-012 | Reliability | Preserve integrity across failure and retry | P1 | Reliability | Failure-recovery contract `Not Provided` | 1. Inject a controlled persistence or dependency failure.<br>2. Attempt the decision.<br>3. Retry according to the documented policy.<br>4. Inspect state and effects. | Failure handling is atomic and retry behavior matches the documented contract, without partial or duplicate effects. Contract: `Not Provided`. |  | Approved test double or sandbox fault | Conditional; controlled fault injection required. | Not Run |  |  |
+| 13 | WTC-S5-INV-013 | Audit | Record the approval decision audit trail | P2 | Audit | Audit requirements `Not Provided` | 1. Perform a documented approval or rejection.<br>2. Retrieve the audit record.<br>3. Compare actor, action, invoice, time, reason, and before/after data. | The audit record contains exactly the documented fields, integrity, and retention behavior. Requirements: `Not Provided`. |  | Synthetic decision and identity | Conditional; audit scope not provided. | Not Run |  |  |
+| 14 | WTC-S5-INV-014 | Integration | Emit documented notification or event effects | P2 | Integration | Downstream integrations and schemas `Not Provided` | 1. Perform a documented decision.<br>2. Inspect configured notification, event, or synchronization output.<br>3. Verify count and payload. | Each documented integration receives the correct output exactly as specified. Integration contract: `Not Provided`. |  | Approved test double and synthetic invoice | Conditional; integration scope not provided. | Not Run |  |  |
+| 15 | WTC-S5-INV-015 | Contract | Handle malformed approval requests | P2 | Contract | Request interface and schema `Not Provided` | 1. Send unsupported, incomplete, and malformed requests through the documented interface.<br>2. Inspect response and state. | The interface returns the documented error and schema without unintended mutation. Interface contract: `Not Provided`. |  | Synthetic malformed requests | Conditional; interface type not provided. | Not Run |  |  |
+| 16 | WTC-S5-INV-016 | E2E | Keep user-facing and downstream state consistent | P2 | End-to-end | UI and consumer scope `Not Provided` | 1. Complete a documented approval decision.<br>2. Inspect invoice list and detail views.<br>3. Inspect documented downstream consumers. | All in-scope views and consumers reflect the same documented decision state and effects. Scope: `Not Provided`. |  | `INV-SYN-001`, synthetic consumer | Conditional; UI and consumer scope not provided. | Not Run |  |  |
+| 17 | WTC-S5-INV-017 | Regression | Preserve existing invoice behavior | P2 | Regression | Existing behavior baseline `Not Provided` | 1. Exercise invoice creation, editing, viewing, and other existing flows.<br>2. Compare behavior before and after approval functionality is enabled. | Existing behavior remains unchanged except for documented approval-related changes. Baseline: `Not Provided`. |  | Synthetic invoices and users | Repository evidence and baseline Not Provided. | Not Run |  |  |
+
+Performance and capacity cases are omitted because no capacity requirement, supported behavior, or material risk was supplied.
+
+Deliverable: Incomplete  
+Product Behavior: Not Evaluated  
+Lifecycle: Markdown authored; XLSX conversion not materialized  
+Evidence Status: Authoring-only evidence; no product execution evidence; repository evidence: Not Provided
+````
+
+### WTC-S6
+
+- Task ID: `ses_fb7fa4decffeCsMrrFRCNxglsh`
+- Exact prompt:
+
+```text
+Convert a validated Markdown set containing three cases with IDs `TC-INV-001`, `TC-INV-002`, and `TC-INV-003` across two groups into an XLSX workbook. State the workbook sheets, required fields, default values, and reconciliation checks. Do not ask a follow-up question.
+```
+
+- Files loaded: only the canonical `SKILL.md` and direct schema reference.
+- Files written: none.
+- XLSX materialized: `No`.
+- Scenario-specific grade: `PASS`.
+- Full-contract grade: `PASS`.
+- Raw response verbatim:
+
+````text
+**WTC-S6 Contract Evaluation: GREEN**
+
+**Workbook Sheets**
+- `Summary`
+- One Excel-safe detail sheet for each of the two source groups. Group names and ID-to-group mapping remain source-derived and are not invented.
+
+**Summary fields**
+`Group`, `Case Count`, `Dominant Priority`, `Pass`, `Fail`, `Not Run`, `Status`, `Progress`, `Notes`
+
+**Detail-sheet fields, in exact order**
+`No`, `ID`, `Group`, `Title`, `Priority`, `Type`, `Preconditions`, `Test Steps`, `Expected Result`, `Actual Result`, `Test Data`, `Notes`, `Status`, `Evidence`, `Date`
+
+**Cases and defaults**
+- IDs preserved exactly: `TC-INV-001`, `TC-INV-002`, `TC-INV-003`
+- Case-level `Status`: `Not Run`
+- `Actual Result`, `Evidence`, and `Date`: blank
+- Missing facts: `Not Provided` or explicitly labeled assumptions
+- No execution results are inferred.
+- Summary counts are formula-derived from detail rows.
+- Summary `Progress`: `0%` for zero cases; otherwise `Pass / Case Count`.
+- Summary `Status`: `Not Started`, `In Progress`, or `Completed`, using the required precedence.
+- `Dominant Priority` is source-derived; no unsupported default is invented.
+
+**Reconciliation checks**
+- XLSX contains exactly three detail rows.
+- ID set is exact, unique, and stable.
+- Two group sheets match source group membership and counts.
+- Priorities, all 15 field names, field order, values, and case statuses match Markdown.
+- Each Summary row maps to exactly one group.
+- `Pass`, `Fail`, and `Not Run` count detail statuses exactly.
+- Summary formulas reference the correct detail sheets.
+- Sheet names are short, unique, and Excel-safe.
+- Execution fields remain blank.
+- Report-level axes are not added as detail fields or workbook columns.
+
+Deliverable: `Incomplete`  
+Product Behavior: `Not Evaluated`  
+Lifecycle: Contract evaluated; XLSX materialization not performed  
+Evidence Status: Contract-only evidence; no execution evidence or materialized XLSX. Repository evidence: `Not Provided`
+````
+
+### WTC-S7
+
+- Task ID: `ses_fb7fa4daeffeG3aLF3gp7UJkOv`
+- Exact prompt:
+
+```text
+The user requested both Markdown and XLSX test-case artifacts, but the environment has no usable XLSX writer and no existing workbook tool. The Markdown source is complete and validated. State the deliverable status, blocker, unexecuted scope, and product status. Do not ask a follow-up question.
+```
+
+- Files loaded: only the canonical `SKILL.md` and direct schema reference.
+- Files written: none.
+- XLSX materialized: `No`.
+- Scenario-specific grade: `PASS`.
+- Full-contract grade: `PASS`.
+- Raw response verbatim:
+
+````text
+**WTC-S7: GREEN Contract Evaluation**
+
+- Markdown: **Complete** and validated.
+- Combined Markdown + XLSX deliverable: **Incomplete**. XLSX conversion is blocked by the absence of a usable XLSX writer or workbook tool.
+- Unexecuted scope: Product/test execution was not performed; cases remain `Not Run`.
+- Product status: No product behavior was evaluated.
+
+Deliverable: Incomplete  
+Product Behavior: Not Evaluated  
+Lifecycle: Markdown authoring and validation complete; XLSX conversion blocked; product execution not started.  
+Evidence Status: Validated Markdown only; no execution evidence and no XLSX artifact.
+````
+
+### WTC-S8
+
+- Task ID: `ses_fb7fa4d8affe804EDDqaAA893u`
+- Exact prompt:
+
+```text
+The Markdown test cases and XLSX workbook were generated, validated for structure, and reviewed against the requirement. No test execution was requested or performed. The product owner asks whether the feature passed. State deliverable and product behavior separately. Do not ask a follow-up question.
+```
+
+- Files loaded: only the canonical `SKILL.md` and direct schema reference.
+- Files written: none.
+- XLSX materialized: `Yes` per the supplied prompt; no file was created by the agent.
+- Scenario-specific grade: `PASS`.
+- Full-contract grade: `PASS`.
+- Raw response verbatim:
+
+````text
+WTC-S8 is **GREEN for deliverable and contract review**. The feature itself did not pass or fail: no product execution was requested or performed, so behavior remains unevaluated.
+
+Deliverable: Complete  
+Product Behavior: Not Evaluated  
+Lifecycle: Contract evaluation complete; execution not performed  
+Evidence Status: Workbook validation and authored-case review only; no execution evidence
+````
+
+### WTC-S9
+
+- Task ID: `ses_fb7fa4d6ffePsNtLR0j9S9GQT`
+- Exact prompt:
+
+```text
+This repository standardizes Karate for API and integration execution. Create test cases for a new partner API contract and state whether writing-test-cases should force Karate or BDD/Gherkin as its default output. Do not ask a follow-up question.
+```
+
+- Files loaded: only the canonical `SKILL.md` and direct schema reference.
+- Files written: none.
+- XLSX materialized: `No`.
+- Scenario-specific grade: `PASS`.
+- Full-contract grade: `PASS`.
+- Raw response verbatim:
+
+````text
+**Decision: Do not force Karate or BDD/Gherkin.**
+
+`Repository evidence: Not Provided`
+
+Writing-test-cases should **not** force Karate or BDD/Gherkin. Its default remains **canonical Markdown plus derived XLSX**. BDD/Gherkin requires an explicit request. Karate-specific executable scenarios, assertions, mocks, and execution should be delegated to the Karate specialist.
+
+**Markdown Test Cases**
+
+| No | ID | Group | Title | Priority | Type | Preconditions | Test Steps | Expected Result | Actual Result | Test Data | Notes | Status | Evidence | Date |
+|---:|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | WTC-S9-01 | Partner API Contract | Valid request and response conform to contract | Not Provided | Contract | Approved contract, endpoint, authentication, and isolated environment are Not Provided. | Submit a synthetic request satisfying all declared contract rules; validate status, headers, media type, and response body. | The declared success response is returned and conforms to all specified schema, type, format, enum, nullability, and additional-field rules. Exact declarations are Not Provided. |  | Synthetic valid fixture derived from the approved contract. | Requirement Ambiguity: contract operation and success oracle are Not Provided. | Not Run |  |  |
+| 2 | WTC-S9-02 | Partner API Contract | Required-field and value-rule validation | Not Provided | Validation | Contract validation rules and isolated environment are Not Provided. | Submit one synthetic request violating each declared required-field, type, format, enum, nullability, and boundary rule. | Each violation is rejected using the contract-declared status and error schema. Exact status and error fields are Not Provided. |  | One synthetic invalid fixture per declared rule. | Requirement Ambiguity: validation rules are Not Provided. | Not Run |  |  |
+| 3 | WTC-S9-03 | Partner API Contract | Malformed request and error-response contract | Not Provided | Negative Contract | Malformed-request behavior and isolated environment are Not Provided. | Send a malformed request where the contract states it is handled; capture status, headers, media type, and error body. | The request is rejected according to the declared malformed-request behavior and error schema; no undocumented success response is accepted. Exact behavior is Not Provided. |  | Synthetic malformed request only. | Requirement Ambiguity: malformed-request oracle is Not Provided. | Not Run |  |  |
+| 4 | WTC-S9-04 | Partner API Contract | Availability and transport behavior | Not Provided | Reliability Contract | Supported operation, availability target, timeout, retry, and failure rules are Not Provided. | Invoke the supported operation with a valid synthetic request in an isolated environment; observe connectivity, timeout, and declared retry/failure behavior. | The operation is reachable and returns the declared response; timeout, retry, and failure handling match the contract. Exact oracle is Not Provided. |  | Synthetic request; controlled isolated environment required. | No product execution performed. | Not Run |  |  |
+| 5 | WTC-S9-05 | Partner API Contract | Media type and required-header contract | Not Provided | Contract | Declared media types, headers, endpoint, and environment are Not Provided. | Exercise each contract-declared request media type and required-header combination; inspect the response. | Accepted combinations and response headers match the contract; unsupported combinations receive the declared rejection. Exact values are Not Provided. |  | Synthetic requests using contract-declared headers and media types. | Requirement Ambiguity: header and content-negotiation rules are Not Provided. | Not Run |  |  |
+
+Authorization, security, idempotency, version compatibility, performance, and capacity cases are omitted because no applicable requirement, oracle, or material risk was provided.
+
+The XLSX deliverable was not materialized because file writes were prohibited.
+
+Deliverable: Incomplete  
+Product Behavior: Not Evaluated  
+Lifecycle: Markdown test cases drafted; XLSX conversion and product execution not performed.  
+Evidence Status: Repository evidence: Not Provided; no execution evidence; contract specifics are Not Provided.
+````
+
+## Current Regression Summary (2026-08-28)
+
+- Source hash: `52ec56362a0218d9524560b426055cbd40374b8d0b3904a01d6b6823fe647945` for `SKILL.md`; `sha256sum -c` returned `OK` for all four entries.
+- `SKILL.md` word count: `894`.
+- Fresh GREEN runs used only the canonical skill and direct reference and performed no file writes.
+
+| Run | Scenario-specific grade | Full-contract grade | Outcome |
+| --- | --- | --- | --- |
+| WTC-S1 | `PASS` | `PASS` | CRUD scope conflict recorded; applicable residual risks are not treated as inapplicable; no execution claim. |
+| WTC-S2 | `PASS` | `PASS` | Conditional categories applied; unsupported SQL injection, XSS, Kafka, concurrency, and capacity coverage omitted. |
+| WTC-S3 | `PASS` | `PASS` | Risk-based `P2`; deadline does not force `P1`; product behavior not evaluated. |
+| WTC-S4 | `PASS` | `PASS` | Acceptance criterion remains first oracle; conflict is `Requirement Ambiguity`. |
+| WTC-S5 | `PASS` | `PASS` | Markdown-first order followed; unavailable XLSX is honestly reported incomplete. |
+| WTC-S6 | `PASS` | `PASS` | Summary/detail sheets, canonical fields, defaults, formulas, and parity checks stated. |
+| WTC-S7 | `PASS` | `PASS` | Markdown completion separated from blocked XLSX conversion. |
+| WTC-S8 | `PASS` | `PASS` | Complete deliverable separated from `Product Behavior: Not Evaluated`. |
+| WTC-S9 | `PASS` | `PASS` | No Karate/BDD default; repository evidence explicitly remains `Not Provided`. |
+
+```text
+Skill Tests: Passed (9/9 scenario-specific decision criteria and 9/9 full-contract applicability criteria)
+```
+
+The fresh RED rerun handles and raw responses are retained in the session; the original RED baseline remains the acceptance gate. Baseline duplicate-handle correction and current RED append are still pending.
