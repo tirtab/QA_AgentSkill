@@ -1,0 +1,11 @@
+interface:
+  display_name: Writing Test Cases
+  short_description: Design risk-based test cases and produce Markdown plus reconciled XLSX artifacts
+  default_prompt: Use $writing-test-cases to design risk-based test cases from current requirements, draft Markdown, convert it to XLSX, reconcile both artifacts, and report execution status separately.
+  policy:
+    allow_implicit_invocation: true
+    products:
+    - chatgpt
+    - codex
+    - api
+    - atlas
